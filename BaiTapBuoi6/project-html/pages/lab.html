@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trang Lab</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <a href="../index.html">Trang chủ</a>
+            </li>
+            <li>
+                <a href="courses.html">Danh sách khóa học</a>
+            </li>
+            <li>
+                <a href="submit.html">Trang gửi form POST</a>
+            </li>
+            <li>
+                <a href="contact.html">Liên hệ – nhúng media</a>
+            </li>
+            <li>
+                <a href="about.html">Tuỳ chọn</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <!--    <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="get">-->
+        <form action="lab.html">
+            <label for="search">Tìm kiếm</label>
+            <input id="search" type="text" name="q" placeholder="Tìm kiếm...">
+            <br>
+            <span>Trình độ</span>
+            <input id="levelA" type="checkbox" name="level[]" value="A">
+            <label for="levelA">A</label>
+            <input id="levelB" type="checkbox" name="level[]" value="B">
+            <label for="levelB">B</label>
+            <input id="levelC" type="checkbox" name="level[]" value="C">
+            <label for="levelC">C</label>
+            <br>
+            <span>Hình thức</span>
+            <input id="on" type="radio" name="mode" value="On">
+            <label for="on">Online</label>
+            <input id="off" type="radio" name="mode" value="Off">
+            <label for="off">Offline</label>
+            <br>
+            <label for="courses">Khóa học:</label>
+            <select id="courses" name="courses">
+                <option value="FE">Frontend</option>
+                <option value="BE">Backend</option>
+                <option value="DEV">DevOps</option>
+            </select>
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trang Submit</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <a href="../index.html">Trang chủ</a>
+            </li>
+            <li>
+                <a href="courses.html">Danh sách khóa học</a>
+            </li>
+            <li>
+                <a href="lab.html">Phòng thí nghiệm – form GET</a>
+            </li>
+            <li>
+                <a href="contact.html">Liên hệ – nhúng media</a>
+            </li>
+            <li>
+                <a href="about.html">Tuỳ chọn</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+            <label for="name">Họ tên</label>
+            <input id="name" type="text" name="username" placeholder="Nhập họ tên">
+            <br>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email">
+            <br>
+            <label for="pw">Password</label>
+            <input id="pw" type="password" name="pass">
+            <br>
+            <label for="age">Tuổi</label>
+            <input id="age" type="number" name="age">
+            <br>
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option>Frontend</option>
+                <option value="BE">Backend</option>
+                <option value="DEV">DevOps</option>
+            </select>
+            <br>
+            <input type="submit" value="Gửi">
+        </form>
+    </div>
+</body>
+</html>
