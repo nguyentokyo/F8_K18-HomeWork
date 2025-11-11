@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giao Dien Demo</title>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            font-size: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+            background-color: #f98000;
+        }
+
+        span {
+            background-color: #e5e7eb;
+        }
+
+        /*Theme*/
+        input[value="light"]:checked + span {
+            color: #8b5e00;
+            background-color: #fff8cc;
+        }
+
+        input[value="light"]:checked ~ #themeLight {
+            color: #111827;
+            background-color: #fff8cc;
+        }
+
+        input[value="light"]:checked ~ .theme {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+
+        input[value="dark"]:checked + span {
+            color: #f9fafb;
+            background-color: #111827;
+        }
+
+        input[value="dark"]:checked ~ #themeDark {
+            color: #f9fafb;
+            background-color: #111827;
+        }
+
+        input[value="dark"]:checked ~ .theme {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+
+        /*Color*/
+        input[value="red"]:checked + span {
+            color: #991b1b;
+            background-color: #fee2e2;
+        }
+
+        input[value="red"]:checked ~ #colorRed {
+            color: #fee2e2;
+            background-color: #7f1d1d;
+        }
+
+        input[value="red"]:checked ~ .color {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+
+        input[value="blue"]:checked + span {
+            color: #dbeafe;
+            background-color: #1d4ed8;
+        }
+
+        input[value="blue"]:checked ~ #colorBlue {
+            color: #dbeafe;
+            background-color: #1d4ed8;
+        }
+
+        input[value="blue"]:checked ~ .color {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+
+        input[value="green"]:checked + span {
+            color: #dcfce7;
+            background-color: #166534;
+        }
+
+        input[value="green"]:checked ~ #colorGreen {
+            color: #166534;
+            background-color: #dcfce7;
+        }
+
+        input[value="green"]:checked ~ .color {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+
+        /*Language*/
+        input[value="vn"]:checked + span {
+            color: #166534;
+            background-color: #bbf7d0;
+        }
+
+        input[value="vn"]:checked ~ #languageVi {
+            color: #166534;
+            background-color: #bbf7d0;
+        }
+
+        input[value="vn"]:checked ~ .language {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+
+        input[value="en"]:checked + span {
+            color: #1d4ed8;
+            background-color: #bfdbfe;
+        }
+
+        input[value="en"]:checked ~ #languageEn {
+            color: #1d4ed8;
+            background-color: #bfdbfe;
+        }
+
+        input[value="en"]:checked ~ .language {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+
+        /*Options*/
+        input[value="1"]:checked + span {
+            color: #92400e;
+            background-color: #fef3c7;
+        }
+
+        input[value="1"]:checked ~ #options1 {
+            color: #92400e;
+            background-color: #fef3c7;
+        }
+
+        input[value="1"]:checked ~ .options {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+
+        input[value="2"]:checked + span {
+            color: #15803d;
+            background-color: #bbf7d0;
+        }
+
+        input[value="2"]:checked ~ #options2 {
+            color: #166534;
+            background-color: #bbf7d0;
+        }
+
+        input[value="2"]:checked ~ .options {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+
+        input[value="3"]:checked + span {
+            color: #b91c1c;
+            background-color: #fee2e2;
+        }
+
+        input[value="3"]:checked ~ #options3 {
+            color: #b91c1c;
+            background-color: #fee2e2;
+        }
+
+        input[value="3"]:checked ~ .options {
+            color: #9ca3af;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trung tâm cấu hình giao diện (Demo)</h1>
+
+    <p>Chọn giao diện (Theme)</p>
+    <input type="radio" name="theme" value="light">
+    <span>Light</span>
+    <input type="radio" name="theme" value="dark">
+    <span>Dark</span>
+
+    <p>Chọn màu chủ đạo (Color)</p>
+    <input type="radio" name="color" value="red">
+    <span>Red</span>
+    <input type="radio" name="color" value="blue">
+    <span>Blue</span>
+    <input type="radio" name="color" value="green">
+    <span>Green</span>
+
+    <p>Chọn ngôn ngữ (Language)</p>
+    <input type="radio" name="lag" value="vn">
+    <span>VN</span>
+    <input type="radio" name="lag" value="en">
+    <span>EN</span>
+
+    <p>Tùy chọn bổ sung (Options - Checkbox)</p>
+    <input type="checkbox" name="Options[]" value="1">
+    <span>Hiển thị mô ta nâng cao</span>
+    <input type="checkbox" name="Options[]" value="2">
+    <span>Bật chế độ Eco</span>
+    <input type="checkbox" name="Options[]" value="3">
+    <span>Hiển thị cảnh báo quan trọng</span>
+
+<!--Theme-->
+    <p class="theme" id="themeLight">
+        Thêm Light: Giao diện sáng, chữ đen.
+    </p>
+    <p class="theme" id="themeDark">
+        Thêm Dark: Giao diện tối, chữ sáng.
+    </p>
+
+<!--Color-->
+    <p class="color" id="colorRed">
+        Màu Red: được nhấn mạnh khi chọn Red.
+    </p>
+    <p class="color" id="colorBlue">
+        Màu Blue: được nhấn mạnh khi chọn Blue.
+    </p>
+    <p class="color" id="colorGreen">
+        Màu Green: được nhấn mạnh khi chọn Green.
+    </p>
+<!--    Language-->
+    <p class="language" id="languageVi">
+        [VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.
+    </p>
+    <p class="language" id="languageEn">
+        [EN] Hello, world! Khi chọn EN, dòng này rõ hơn.
+    </p>
+
+<!--    Options-->
+    <p class="options" id="options1">
+        Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện.
+    </p>
+    <p class="options" id="options2">
+        Chế độ Eco: mô phòng trạng thái tiết kiệm tài nguyên cho giao diện.
+    </p>
+    <p class="options" id="options3">
+        Cảnh báo quan trọng; khu vực dùng để nhấn mạnh thông tin hệ thống.
+    </p>
+</body>
+</html>
