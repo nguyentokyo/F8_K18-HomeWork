@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai 1</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            border: 5px solid tomato;
+        }
+
+        #box2 {
+            width: 200px;
+            height: 100px;
+            background-color: transparent;
+            border: 5px solid dodgerblue;
+        }
+
+        /* Hình tam giác
+            Tư duy từ hình vuông chia chéo làm 4 phần
+            phần conten vs pading = 0
+            border-width : trên-phải dưới-trái
+            (thẻ block thì phải cho width = 0
+             thẻ inline thì ăn theo kích thước border trên ok)
+        */
+
+        /* cách 1 hình tam giác . ghi gộp tư duy dùng border*/
+        /*.box3 {*/
+        /*    width: 0;*/
+        /*    border-style: solid;*/
+        /*    border-width: 20px 40px 80px 40px ;*/
+        /*    border-color: transparent transparent mediumseagreen transparent;*/
+        /*}*/
+
+        /* cách 2 hình tam giác */
+        #box3 {
+            width: 0;
+            border-top: 20px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 80px solid mediumseagreen;
+            border-left: 40px solid transparent;
+        }
+
+        #box4 {
+            width: 0;
+            border-top: 80px solid orange;
+            border-right: 40px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 40px solid transparent;
+        }
+
+        #box5 {
+            width: 0;
+            border-style: solid;
+            border-width: 40px 80px 40px 20px ;
+            border-color: transparent mediumpurple transparent  transparent;
+        }
+
+        #box6 {
+            width: 0;
+            border-style: solid;
+            border-width: 40px 20px 40px 80px ;
+            border-color: transparent transparent transparent saddlebrown;
+        }
+
+        #box7 {
+            width: 50px;
+            border-style: solid;
+            border-width: 20px 10px 70px 10px ;
+            border-color: transparent transparent mediumseagreen transparent;
+        }
+
+        #box8 {
+            width: 0;
+            border-style: solid;
+            border-width: 20px 70px 50px 70px ;
+            border-color: transparent transparent darkslategray transparent;
+        }
+
+        #box9 {
+            width: 0;
+            border-style: solid;
+            border-width: 50px 20px 100px 20px ;
+            border-color: transparent transparent saddlebrown transparent;
+        }
+        #box10 {
+            width: 0;
+            border-style: solid;
+            border-width: 50px 50px 50px 50px ;
+            border-color: transparent transparent coral transparent;
+        }
+
+        #box11 {
+            width: 0;
+            border-style: solid;
+            border-width: 50px 50px 50px 60px ;
+            border-color: transparent transparent transparent forestgreen;
+        }
+
+        #box12 {
+            width: 0;
+            border-style: solid;
+            border-width: 50px 60px 50px 50px ;
+            border-color: transparent #8b5e00 transparent transparent;
+        }
+
+        #box13 {
+            width: 0;
+            border-style: solid;
+            border-width: 30px 50px 30px 60px ;
+            border-color: orangered transparent orangered orangered;;
+        }
+
+        #box14 {
+            width: 200px;
+            height: 100px;
+        }
+
+        #F {
+            position: relative;
+            width:100px;
+            height:100px;
+        }
+        #F .F-left {
+            position:absolute;
+            left:0;
+            top:0;
+            bottom:0;
+            width:15px;
+            background:orangered;
+        }
+        #F .F-top {
+            position:absolute;
+            left:0;
+            top:0;
+            height:15px;
+            width:60px;
+            background:orangered;
+        }
+        #F .F-bottom {
+            position:absolute;
+            left:0;
+            top:45px;
+            height:15px;
+            width:60px;
+            background:orangered;
+        }
+
+        #F8 {
+            margin-top: -100px;
+            position: relative;
+            width:150px;
+            height:100px;
+        }
+
+        #F8 .F8-top {
+            position:absolute;
+            right:0;
+            top:0;
+            height:15px;
+            width:60px;
+            background:orangered;
+        }
+
+        #F8 .F8-right {
+            position:absolute;
+            right:45px;
+            top:0;
+            height:100px;
+            width:15px;
+            background:orangered;
+        }
+
+        #F8 .F8-left {
+            position:absolute;
+            right:0;
+            top:0;
+            bottom:0;
+            width:15px;
+            background:orangered;
+        }
+
+        #F8 .F8-bottom {
+            position:absolute;
+            right:0;
+            top:85px;
+            height:15px;
+            width:60px;
+            background:orangered;
+        }
+
+        #F8 .F8-mid {
+            position:absolute;
+            right:0;
+            top:45px;
+            height:15px;
+            width:60px;
+            background:orangered;
+        }
+
+        .f8groupA1 {
+            width: 0;
+            border-style: solid;
+            border-width: 7px 0 7px 60px ;
+            border-color: green transparent green green;;
+        }
+        .f8groupA1left {
+            margin-top: -58px;
+            width: 0;
+            border-style: solid;
+            border-width: 60px 7px 0 7px ;
+            border-color: green green green green;
+        }
+
+        .f8groupA2 {
+            margin-top: 30px;
+            width: 0;
+            border-style: solid;
+            border-width: 7px 0 7px 60px ;
+            border-color: green transparent green green;;
+        }
+
+        .f8groupA2left {
+            width: 0;
+            border-style: solid;
+            border-width: 60px 7px 0 7px ;
+            border-color: green green green green;
+        }
+
+        #F8groupB {
+            margin-top: -120px;
+            margin-left: 80px;
+        }
+
+        .f8groupB1 {
+            width: 35px;
+            height: 35px;
+            background-color: transparent;
+            border: 14px solid green;
+        }
+        .f8groupB2 {
+            margin-top: -15px;
+            width: 35px;
+            height: 35px;
+            background-color: transparent;
+            border: 14px solid green;
+        }
+        .box {
+            display: inline-block;
+            background-color: transparent;
+            margin: 10px; /* Khoảng cách giữa các div */
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <div class="box" id="box5"></div>
+    <div class="box" id="box6"></div>
+    <div class="box" id="box7"></div>
+    <div class="box" id="box8"></div>
+    <div class="box" id="box9"></div>
+    <div class="box" id="box10"></div>
+    <div class="box" id="box11"></div>
+    <div class="box" id="box12"></div>
+    <div class="box" id="box13"></div>
+
+    <div class="box" id="box14">
+        <div id="F">
+            <div class="F-left"></div>
+            <div class="F-top"></div>
+            <div class="F-bottom"></div>
+        </div>
+        <div id="F8">
+            <div class="F8-top"></div>
+            <div class="F8-right"></div>
+            <div class="F8-bottom"></div>
+            <div class="F8-left"></div>
+            <div class="F8-mid"></div>
+        </div>
+    </div>
+
+    <div class="box" id="box15">
+        <div id="F8groupA">
+            <div class="f8groupA1"></div>
+            <div class="f8groupA2"></div>
+            <div class="f8groupA1left"></div>
+            <div class="f8groupA2left"></div>
+        </div>
+        <div id="F8groupB">
+            <div class="f8groupB1"></div>
+            <div class="f8groupB2"></div>
+        </div>
+    </div>
+</body>
+</html>
