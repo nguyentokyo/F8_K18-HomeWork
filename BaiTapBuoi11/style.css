@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: #fbfbfb;
+}
+
+.suggest {
+    background-image: url("https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?q=80&w=2070&auto=format&fit=crop");
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.suggest__box {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.header h1 span:first-child {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1e293b;
+}
+
+.header h1 span:last-child {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #c084fc;
+}
+.header p {
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.avatar {
+    text-align: center;
+    padding: 2rem;
+}
+
+.btn {
+    color: white;
+    padding: 1rem 1rem;
+    background-color: #a855f7;
+    font-size: 1.125rem;
+    border-radius: 2rem;
+}
+
+.btn:hover {
+    background: #9333ea;
+}
+
+.avatar img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.5rem solid rgba(192, 132, 252, 0.6);
+}
+
+.avatar p {
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+}
+
+.avatar p span {
+    color: #9333ea;
+}
+
+.advice {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.advice__box {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.advice__box .title {
+    font-size: 1.375rem;
+    padding-bottom: 1rem;
+}
+
+.advice__box .content {
+    font-size: 1.125rem;
+}
+
+.advice input:checked ~ .advice__box {
+    background-color: rgba(168, 85, 247, 0.15);
+    color: #6b21a8;
+}
+
+.point {
+    text-align: center;
+}
+
+.point span:nth-child(2) {
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+.point img {
+    width: 20px;
+    height: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0 0 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 0.1rem solid rgba(192, 132, 252, 0.6); /* viền footer */
+}
