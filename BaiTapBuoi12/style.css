@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*khai báo 1rem = 16px;*/
+html {
+    font-size: 16px;
+}
+
+.main {
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: #fbfbfb;
+}
+
+.main-taget {
+    background-image: url("https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?q=80&w=2070&auto=format&fit=crop");
+    background-size: cover;
+    border-radius: 1rem 1rem 0 0;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-taget-box {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-header h1 {
+    text-align: center;
+}
+
+.main-header h1 strong:first-child {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1e293b;
+}
+
+.main-header h1 strong:last-child {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #c084fc;
+}
+
+.main-header p {
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 1rem;
+    color: #334155;
+}
+
+.main-content-header {
+    text-align: center;
+    margin: 2rem;
+}
+
+.button {
+    display: inline-block;
+    color: white;
+    padding: 1rem 1rem;
+    font-size: 1.125rem;
+    border-radius: 2rem;
+}
+
+.button-start {
+    margin: 2rem;
+    background-color: #a855f7;
+}
+
+.button-support {
+    margin: 2rem;
+    background-color: #f05123;
+}
+
+/*start xử lý phần nút Bắt đầu học miễn phí*/
+#toggle-start {
+    display: none;
+}
+
+.modal-start-dialog {
+    display: none;
+}
+
+#toggle-start:checked ~ .modal-start-dialog {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 1.2rem;
+    width: 35rem;
+    height: 30rem;
+    font-size: 1.25rem;
+    color: black;
+    z-index: 9999;
+}
+
+#toggle-start:checked ~ .modal-start-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-start-dialog .modal-start-heading {
+    position: relative;
+    padding: 0.5rem;
+}
+
+.modal-start-dialog .toggle-close-label {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.modal-start-dialog .modal-start-heading h2 {
+    /*display: inline-block;*/
+    /*width: calc(100% - 40px);*/
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-start-dialog .modal-start-body {
+    margin: 1rem;
+}
+
+.modal-start-dialog .modal-start-body ul {
+    list-style: none;
+    text-align: left;
+    padding: 1rem 2rem;
+}
+
+.modal-start-dialog .modal-start-body li {
+    margin: 0.8rem;
+}
+
+.modal-start-dialog .modal-start-body .modal-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.modal-start-body-btn {
+    border: none;
+    color: white;
+    width: calc(100% - 4rem);
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #c084fc;
+    padding: 1rem 1rem;
+}
+
+.modal-start-footer a {
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.modal-start-footer a:hover {
+    text-decoration: underline;
+}
+/*end xử lý phần nút Bắt đầu học miễn phí*/
+
+/*start xử lý phần nút Tư vấn ngay*/
+#toggle-support {
+    display: none;
+}
+
+.modal-support-dialog {
+    display: none;
+}
+
+#toggle-support:checked ~ .modal-support-dialog {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 1.2rem;
+    width: 40rem;
+    height: 52rem;
+    font-size: 1.25rem;
+    color: black;
+    z-index: 9999;
+}
+
+#toggle-support:checked ~ .modal-support-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-support-dialog .modal-support-heading {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.modal-support-dialog .toggle-close-label {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.modal-support-dialog .modal-support-heading h2 {
+    /*display: inline-block;*/
+    /*width: calc(100% - 40px);*/
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-support-dialog .modal-support-body {
+    margin: 2rem;
+    text-align: left;
+}
+
+.modal-support, .list-taget {
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-support-user-hover
+, .modal-support-tel-hover
+, .modal-support-email-hover
+, .list-taget-hover {
+    display: none;
+}
+
+.modal-support-user:hover .modal-support-user-hover
+, .modal-support-tel:hover .modal-support-tel-hover
+, .modal-support-email:hover .modal-support-email-hover
+, .list-taget:hover .list-taget-hover {
+    display: block;
+    position: absolute;
+    top: -70px;
+    color: white;
+    background-color: #64748b;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.modal-support-user:hover .modal-support-user-hoversub
+, .modal-support-tel:hover .modal-support-tel-hoversub
+, .modal-support-email:hover .modal-support-email-hoversub
+, .list-taget:hover .list-hoversub {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    width: 0;
+    font-size: 0.8rem;
+    border-top: 0.8rem solid #64748b;
+    border-right: 0.8rem solid transparent;
+    border-left: 0.8rem solid transparent;
+}
+
+.modal-support > label, .modal-support > input {
+    display: block;
+}
+
+.modal-support input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    width: 100%;
+    font-size: 1.2rem;
+    outline-color: rgba(193, 193, 193, 0.98);
+}
+
+.modal-support-footer {
+    text-align: center;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: #f05123;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.modal-support-footer input {
+    display: none;
+}
+
+.required {
+    color: #ef4444;
+}
+/*end xử lý phần nút Tư vấn ngay*/
+
+/*xử lý câu hỏi thường gặp*/
+.question-heading {
+    text-align: center;
+    margin: 1rem;
+}
+
+.question-body {
+    margin: 20px auto;
+    width: 40%;
+}
+
+.question-item {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 1rem;
+    padding: 0;
+    margin-bottom: 0.8rem;
+    border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+.question-toggle {
+    display: none;
+}
+
+.question-header {
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}
+
+.question-title {
+    display: inline-block;
+    width: calc(100% - 1.2rem);
+}
+
+.open, .close {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.close, .question-content {
+    display: none;
+}
+
+#question-01:checked + .question-item .question-header .open
+,#question-02:checked + .question-item .question-header .open
+,#question-03:checked + .question-item .question-header .open {
+    display: none;
+}
+
+#question-01:checked + .question-item .question-header .close
+,#question-02:checked + .question-item .question-header .close
+,#question-03:checked + .question-item .question-header .close {
+    display: inline;
+}
+
+#question-01:checked + .question-item .question-content
+,#question-02:checked + .question-item .question-content
+,#question-03:checked + .question-item .question-content {
+    display: block;
+}
+
+#question-01:checked + .question-item .question-header
+,#question-02:checked + .question-item .question-header
+,#question-03:checked + .question-item .question-header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.question-content {
+    margin: 0.3rem 1rem 1rem 1rem;
+}
+
+.question-header:hover {
+    background-color: rgba(192, 132, 252, 0.15);
+}
+
+.avatar img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.3rem solid rgba(192, 132, 252, 0.6);
+}
+
+.avatar p {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.avatar strong {
+    color: #9333ea;
+}
+
+.main-content-body {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.body-logic {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1.5rem;
+}
+
+.body-logic-header {
+    /*font-size: 1.375rem;*/
+    padding-bottom: 1rem;
+}
+
+.body-logic-content {
+    font-size: 1.2rem;
+}
+
+
+#toggle-body:checked ~ .body-logic {
+    background-color: rgba(168, 85, 247, 0.15);
+    color: #6b21a8;
+}
+
+.main-content-footer {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.main-content-footer span {
+    margin: 1rem;
+}
+
+.main-content-footer img {
+    width: 20px;
+    height: 20px;
+}
+
+.main-footer {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0 0 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-top: 0.1rem solid rgba(192, 132, 252, 0.6); /* viền footer */
+}
+
+
