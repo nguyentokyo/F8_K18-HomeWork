@@ -1,0 +1,142 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+}
+
+.header-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d5d5d5;
+    height: 60px;
+}
+
+.header-bar-body {
+    position: relative;
+    width: 600px;
+    margin: auto;
+}
+
+.header-bar-logo {
+    position: absolute;
+    border-radius: 0.5rem;
+    top: 5px;
+}
+
+.header-bar-menu {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.menu-main {
+    list-style: none;
+}
+
+.item {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+
+.item-title {
+    font-weight: bold;
+}
+
+.item-sub {
+    list-style: none;
+    padding: 10px;
+}
+
+.item-01:hover
+, .item-02:hover
+, .item-03:hover
+, .item-04:hover {
+    border-bottom: 2px solid #87010c;
+}
+
+.item-01:hover .item-title
+, .item-02:hover .item-title
+, .item-03:hover .item-title
+, .item-04:hover .item-title {
+    color: #d62828;
+}
+
+.menu-sub {
+    display: none;
+}
+
+.item-01:hover .menu-sub
+, .item-02:hover .menu-sub
+, .item-03:hover .menu-sub
+, .item-04:hover .menu-sub {
+    display: block;
+    position: absolute;
+    width: 200px;
+    top: 22px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+.item-sub:hover {
+    background-color: #f5f5f5;
+}
+
+.item-sub:hover .item-title-sub {
+    color: #d62828;
+}
+
+.item-sub .item-icon {
+    position: absolute;
+    right: 5px;
+}
+
+.menu-sub-sub {
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+.item-sub-sub {
+    padding: 10px;
+}
+
+.item-sub-02:hover .menu-sub-sub {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 39px;
+}
+
+.item-sub-01:hover .menu-sub-sub {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.item-sub-03:hover .menu-sub-sub {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 78px;
+}
+
+.item-sub-sub:hover {
+    background-color: #f5f5f5;
+}
+
+.item-sub-sub:hover .item-title-sub-sub {
+    color: #d62828;
+}
+
+.menu-sub-sub:hover ~ .item-title-sub {
+    color: #333333;
+}

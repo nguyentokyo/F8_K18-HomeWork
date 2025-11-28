@@ -1,0 +1,234 @@
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*html {*/
+/*    font-size: 16px;*/
+/*    font-family: Arial, Helvetica, sans-serif;*/
+/*}*/
+
+/*.header-bar {*/
+/*    background-color: #aafbfb;*/
+/*}*/
+
+/*.header-bar-content img {*/
+/*    border-radius: 0.5rem;*/
+/*}*/
+
+/*.header-bar-content {*/
+/*    position: relative;*/
+/*    width: 600px;*/
+/*    margin: auto;*/
+/*}*/
+
+/*.header-bar-content .menu-main > nav > ul > li {*/
+/*    list-style: none;*/
+/*    display: inline-block;*/
+/*    padding: 0 1rem;*/
+/*}*/
+
+/*.header-bar-content .menu-main > nav > ul > li > ul {*/
+/*    display: none;*/
+/*    list-style: none;*/
+/*}*/
+
+/*.header-bar-content:hover .menu-main > nav > ul > li > ul {*/
+/*    list-style: none;*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    border: 1px solid #989898;*/
+/*    width: 200px;*/
+/*    top: 30px;*/
+/*}*/
+
+/*.header-bar-content:hover .menu-main > nav > ul > li > ul > li {*/
+/*    padding: 10px;*/
+/*}*/
+
+/*.header-bar-content:hover .menu-main > nav > ul > li > ul > li > span {*/
+/*    position: absolute;*/
+/*    !*left: calc(100% - 20px);*!*/
+/*    right: 20px;*/
+/*}*/
+
+/*.header-bar-content .menu-main > nav > ul > li > ul > li:hover {*/
+/*    background-color: #989898;*/
+/*}*/
+
+/*.menu-main {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    right: 0;*/
+/*    padding: 10px;*/
+/*}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+}
+
+.header-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d5d5d5;
+    height: 60px;
+}
+
+.header-bar-logo {
+    position: absolute;
+    border-radius: 0.5rem;
+    top: 5px;
+}
+
+.header-bar-body {
+    position: relative;
+    width: 600px;
+    margin: auto;
+}
+
+.menu-main {
+    list-style: none;
+    position: relative;
+}
+
+.menu-icon   {
+    color: #555555;
+}
+
+.header-bar-menu {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.header-bar-menu .menu-main .menu-item {
+    display: inline-block;
+    margin: 10px;
+}
+
+.menu-sub {
+    list-style: none;
+    display: none;
+    background-color: #ffffff;
+}
+
+.menu-item:hover {
+    border-bottom: 2px solid #9a0000;
+}
+
+.menu-title {
+    font-weight: bold;
+}
+
+.menu-title:hover {
+    color: #9a0000;
+}
+
+.menu-item-01:hover .menu-sub
+, .menu-item-02:hover .menu-sub
+, .menu-item-03:hover .menu-sub
+, .menu-item-04:hover .menu-sub
+{
+    display: block;
+    width: 200px;
+    top : 32px;
+    position: absolute;
+    border: 1px solid #d5d5d5;
+}
+
+.menu-sub-item {
+    padding: 10px;
+}
+
+.menu-sub-item:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-item .menu-sub-item span {
+    position: absolute;
+    right: 5px;
+}
+
+/*.menu-sub-sub {*/
+/*    list-style: none;*/
+/*    display: none;*/
+/*    background-color: #ffffff;*/
+/*}*/
+
+/*.menu-item-01 .menu-sub-item-02:hover .menu-sub-sub*/
+/*, .menu-item-04 .menu-sub-item-02:hover .menu-sub-sub*/
+/*{*/
+/*    display: block;*/
+/*    width: 200px;*/
+/*    position: absolute;*/
+/*    !*left: 199px;*!*/
+/*    left: 100%;*/
+/*    top: 39px;*/
+/*    border: 1px solid #d5d5d5;*/
+/*}*/
+
+/*.menu-item-02 .menu-sub-item-01:hover .menu-sub-sub {*/
+/*      display: block;*/
+/*      width: 200px;*/
+/*      position: absolute;*/
+/*      left: 100%;*/
+/*      top: 0;*/
+/*      border: 1px solid #d5d5d5;*/
+/*}*/
+
+/*.menu-item-03 .menu-sub-item-03:hover .menu-sub-sub {*/
+/*    display: block;*/
+/*    width: 200px;*/
+/*    position: absolute;*/
+/*    left: 100%;*/
+/*    top: 78px;*/
+/*    border: 1px solid #d5d5d5;*/
+/*}*/
+
+.menu-sub-sub {
+    list-style: none;
+    display: none;
+    background-color: #ffffff;
+    width: 200px;
+    border: 1px solid #d5d5d5;
+}
+
+.menu-item-01 .menu-sub-item-02:hover .menu-sub-sub
+, .menu-item-04 .menu-sub-item-02:hover .menu-sub-sub
+{
+    display: block;
+    position: absolute;
+    left: 100%;     /*left: 199px;*/
+    top: 39px;
+}
+
+.menu-item-02 .menu-sub-item-01:hover .menu-sub-sub {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.menu-item-03 .menu-sub-item-03:hover .menu-sub-sub {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 78px;
+}
+
+
+.menu-sub-sub-item {
+    padding: 10px;
+}
+
+.menu-sub-sub-item:hover {
+    background-color: #f5f5f5;
+}
