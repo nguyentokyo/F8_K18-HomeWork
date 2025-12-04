@@ -1,0 +1,84 @@
+header {
+    font-size: 18px;
+}
+
+#header-top {
+    background: #FF9500;
+    height: 55px;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-top img {
+    margin-left: 23px;
+}
+
+#header--logo {
+    background-image: url("../images/logo.svg");
+    background-color: #FF9500;
+    background-repeat: no-repeat;
+    background-position: center;  /* lam giua anh*/
+    height: 54px;
+    width: 54px;
+    border-radius: 8px;
+}
+
+#header-bottom {
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #F1F1F3;
+}
+
+#header-bottom div {
+    display: flex;
+    align-items: center;
+}
+
+#header-bottom nav {
+    margin-left: 50px;
+    display: flex;
+}
+
+#header-bottom ul {
+    display: flex;
+    margin-left: 26px;
+}
+
+#header-bottom ul li {
+    list-style: none;
+    padding: 14px 24px;
+}
+
+#header-bottom nav div {
+    background: #F1F1F3;
+    border-radius: 8px;
+    padding: 14px 24px;
+}
+
+#header--action button {
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.header--sign {
+    color: #262626;
+    background-color: transparent;
+}
+
+.header--login {
+    padding: 14px 24px;
+    margin-left: 30px;
+    background: #FF9500;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+
+

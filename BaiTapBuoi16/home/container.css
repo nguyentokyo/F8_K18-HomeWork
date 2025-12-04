@@ -1,0 +1,59 @@
+
+#container {
+    width: 1600px;
+    margin: 100px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
+    background: #FCFCFD;
+
+}
+
+.container--nav {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    height: 154px;
+    border-radius: 12px;
+    border: 1px solid #F1F1F3
+}
+
+.container--car {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container--car img {
+    padding: 30px 64px;
+}
+
+.container--car + .container--car {
+    border-left: 1px solid #F1F1F3
+}
+
+#image {
+    width: 1600px;
+    margin: 0 auto;
+}
+.image--container {
+    margin-top: 100px;
+    height: 790px;
+    background-image: url("../images/image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image--icon {
+    border-radius: 50px;
+    height: 72px;
+    width: 72px;
+    border: 6px solid #FFFFFF4D;
+    background: #FFFFFF33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
