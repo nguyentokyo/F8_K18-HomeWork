@@ -1,0 +1,124 @@
+#our-courses {
+    max-width: 1600px;
+    margin: 100px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
+}
+.our-courses-heading {
+    margin-bottom: 80px;
+}
+.our-courses-heading h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #262626;
+}
+
+.our-courses-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-courses-title p {
+    width: 1177px;
+    flex-shrink: 1;
+    font-size: 18px;
+    font-weight: 400;
+    color: #59595A;
+}
+
+.our-courses-title button {
+    border: 1px solid #F1F1F3;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 18px 24px;
+    background: #FCFCFD;
+    border-radius: 8px;
+    color: #262626;
+}
+
+/*-----------*/
+.our-courses-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.our-courses-card {
+    background: #FFFFFF;
+    padding: 50px;
+    border-radius: 12px;
+    border: 1px solid #F1F1F3;
+}
+
+.our-courses-image img {
+    width: 684px;
+    height: 380px;
+    object-fit: cover;      /*cắt ảnh cho vừa khít ko bị vỡ*/
+    border-radius: 8px;
+}
+
+.our-courses-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+}
+
+.tag-item ul {
+    display: flex;
+    list-style: none;
+}
+
+.tag-item ul li {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+    background: #FFFFFF;
+    color: #4C4C4D;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.tag-item ul li:nth-child(2) {
+    margin-left: 10px;
+}
+
+.tag-by {
+    font-weight: 500;
+    font-size: 20px;
+    color: #262626;
+}
+
+.our-courses-content {
+    margin: 30px auto;
+}
+
+.our-courses-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 14px;
+}
+
+.our-courses-content p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #4C4C4D;
+}
+
+.our-courses-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.our-courses-action a {
+    text-decoration: none;
+    border: 1px solid #F1F1F3;
+    padding: 18px 295px;
+    border-radius: 8px;
+    background: #F7F7F8;
+}
