@@ -107,30 +107,15 @@ ul {
     border-radius: 8px;
 }
 
-.box123-face {
-    background-image: url("../icons/face-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.box123-icon {
+    display: flex;
+    align-items: center;
+}
+
+.box123-icon img {
     height: 24px;
     width: 24px;
 }
-
-.box123-x {
-    background-image: url("../icons/x-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 24px;
-    width: 24px;
-}
-
-.box123-linked {
-    background-image: url("../icons/linked-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 24px;
-    width: 24px;
-}
-
 
 .box2 {
     display: flex;
