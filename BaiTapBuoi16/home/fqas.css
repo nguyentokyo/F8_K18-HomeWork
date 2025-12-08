@@ -1,0 +1,176 @@
+#fqa-support {
+    max-width: 1600px;
+    margin: 150px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
+}
+
+.fqa {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 12px;
+}
+
+.fqa-main {
+    /*background: #FFFFFF;*/
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+    gap: 120px;
+}
+
+.fqa-header {
+    /*background: #428701;*/
+}
+
+.fqa-header h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 10px;
+}
+.fqa-header p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
+    margin-bottom: 50px;
+}
+
+.fqa-header button {
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 18px 24px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+    color: #262626;
+}
+
+.fqa-content {
+    max-width: 867px;
+}
+
+.fqa-content-card {
+    margin-bottom: 10px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #F1F1F3;
+}
+
+.fqa-content-item {
+    width: 767px;
+    margin: 50px;
+}
+
+.fqa-content-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*margin-bottom: 50px;*/
+}
+
+.fqa-content-title span:nth-child(1) {
+    font-size: 20px;
+    font-weight: 500;
+    color: #262626;
+}
+
+.fqa-content-title span:nth-child(2) {
+    /*background: #9333ea;*/
+}
+
+.fqa-content-check {
+    display: flex;
+    justify-content: end;
+    margin-left: 30px;
+}
+
+.fqa-content-icon-open {
+    background-image: url("../icons/open-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f4ebd4;
+    border-radius: 8px;
+    height: 52px;
+    width: 52px;
+}
+
+.fqa-content-icon-close {
+    background-image: url("../icons/close-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f4ebd4;
+    border-radius: 8px;
+    height: 52px;
+    width: 52px;
+}
+
+/*.fqa-content {*/
+/*    background: rgba(128, 0, 128, 0.55);*/
+/*}*/
+
+.fqa-content-body {
+    margin-top: 24px;
+    border-top: 1px solid #F1F1F3;
+    padding-top: 50px;
+}
+.fqa-content-body p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #4C4C4D;
+    margin-bottom: 50px;
+}
+
+.fqa-content-action-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: #F7F7F8;
+    border-radius: 8px;
+    border: 1px solid #F1F1F3;
+}
+
+.fqa-content-action-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.fqa-content-icon-btn {
+    background-image: url("../icons/slide-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f4ebd4;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+}
+
+.fqa-content-body
+,.fqa-content-icon-close {
+    display: none;
+}
+
+#toggle-question:checked ~ .fqa-content-body
+,#toggle-question2:checked ~ .fqa-content-body
+,#toggle-question3:checked ~ .fqa-content-body
+,#toggle-question4:checked ~ .fqa-content-body
+,#toggle-question5:checked ~ .fqa-content-body {
+    display: block;
+}
+
+#toggle-question:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-open
+, #toggle-question2:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-open
+, #toggle-question3:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-open
+, #toggle-question4:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-open
+, #toggle-question5:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-open {
+    display: none;
+}
+
+#toggle-question:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-close
+, #toggle-question2:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-close
+, #toggle-question3:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-close
+, #toggle-question4:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-close
+, #toggle-question5:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-close {
+    display: block;
+}

@@ -1,0 +1,151 @@
+footer {
+    background-color: #FFFFFF;
+    margin: 142px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
+}
+
+.box {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.box12 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.box11 {
+    width: 392px;
+}
+
+.box11-logo {
+    background-image: url("../images/logo.svg");
+    background-color: #FF9500;
+    background-repeat: no-repeat;
+    background-position: center;  /* lam giua anh*/
+    height: 54px;
+    width: 54px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.box11 > ul li {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #262626;
+    display: flex;
+    align-items: center;
+}
+
+.box11-mail {
+    background-image: url("../icons/mail-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+}
+
+.box11-tel {
+    background-image: url("../icons/tel-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+}
+
+.box11-map {
+    background-image: url("../icons/map-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+}
+
+.box11-icon {
+    margin-right: 6px;
+}
+
+.box121
+, .box122
+, .box123 {
+    width: 250px;
+}
+
+.box12-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 14px;
+}
+
+.box121 > ul li
+, .box122 > ul li {
+    margin-top: 8px;
+}
+
+.box123 > ul li {
+    display: inline-block;
+}
+
+.box123-icon {
+    background: #F7F7F8;
+    border: 1px solid #F1F1F3;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.box123-face {
+    background-image: url("../icons/face-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+}
+
+.box123-x {
+    background-image: url("../icons/x-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+}
+
+.box123-linked {
+    background-image: url("../icons/linked-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+}
+
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #F1F1F3;
+}
+
+.box2 p {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #656567;
+}
+
+
+
+
