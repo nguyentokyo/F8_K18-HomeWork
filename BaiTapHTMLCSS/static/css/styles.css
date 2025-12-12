@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+}
+
+html {
+    background-image: url("../images/group-image.svg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+
+.bg-color {
+    background-color: #1A1A1A;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid transparent;
+}
+
+ul {
+    list-style: none;
+}

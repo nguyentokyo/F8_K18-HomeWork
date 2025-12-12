@@ -27,7 +27,7 @@ header {
 }
 
 #header-bottom {
-    width: 1600px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -91,4 +91,22 @@ header {
     color: #FFFFFF;
 }
 
+#header--action a:last-child {
+    display: none;
+}
+
+
+@media screen and ( max-width: 1400px) {
+
+}
+
+@media screen and ( max-width: 600px) {
+    #header-bottom nav {
+        display: none;
+    }
+
+    #header--action a:last-child {
+        display: inline-block;
+    }
+}
 

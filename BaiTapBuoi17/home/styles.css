@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+body {
+    background-color: #F7F7F8;
+}
+
+.test {
+    height: 400px;
+}

@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="fotters.css">
 </head>
 <body>
+    <input type="checkbox" id="toggle-menu" hidden>
     <header>
+
         <div id="header-top">
             <span>Free Courses 🌟 Sale Ends Soon, Get It Now</span>
             <img src="../icons/arrow-right.svg" alt="arrow-right">
@@ -42,13 +44,13 @@
             </div>
 
             <div id="header--action">
-<!--                <button class="header&#45;&#45;sign">Sign Up</button>-->
-<!--                <button class="header&#45;&#45;login">Login</button>-->
                 <a href="#" class="header--sign">Sign Up</a>
                 <a href="#" class="header--login">Login</a>
-                <a href="#" class="header--menu">menu</a>
+                <label for="toggle-menu" class="header--menu"></label>
+                <label for="toggle-menu" class="header--menu-close"></label>
             </div>
         </div>
+        <div class="modal-support-overlay"></div>
     </header>
 
     <main>
