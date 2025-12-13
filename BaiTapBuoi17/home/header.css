@@ -57,23 +57,11 @@ header {
     padding: 14px 24px;
 }
 
-/*#header-bottom nav div {*/
-/*    background: #F1F1F3;*/
-/*    border-radius: 8px;*/
-/*    padding: 14px 24px;*/
-/*}*/
-
 #header-bottom ul li:hover {
-        background: #F1F1F3;
-        border-radius: 8px;
-        padding: 14px 24px;
+    background: #F1F1F3;
+    border-radius: 8px;
+    padding: 14px 24px;
 }
-
-/*#header--action button {*/
-/*    border: none;*/
-/*    outline: none;*/
-/*    font-size: 18px;*/
-/*}*/
 
 .header--sign {
     color: #262626;
@@ -92,154 +80,40 @@ header {
     color: #FFFFFF;
 }
 
-#header--action .header--menu
-, #header--action .header--menu-close {
+.header--menu
+, .header--menu-close {
     display: none;
 }
 
-/* * * Thiet bi Table & Mobile: @media screen and (max-width: 991px) * * */
-@media screen and (max-width: 991px) {
-}
-/*  * * Thiet bi rieng Table: @media screen and (min-width: 768px) and (max-width: 991px) * * */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-}
-
-/*!* * * Thiet bi Mobile: @media screen and (max-width: 767px) * * *!*/
-@media screen and (max-width: 767px) {
-    header {
+@media screen and (max-width: 768px) {
+    #header-top {
+        margin-top: 3.75rem;
         font-size: 14px;
     }
 
-    #header-top {
-        background: #FF9500;
-        margin-top: 60px;
-        margin-left: 16px;
-        margin-right: 16px;
-        height: 55px;
-        border-radius: 8px;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    #header-top span {
+        margin: 10px auto 10px 16px;
     }
 
-    #header-bottom {
-        position: relative;
-        max-width: 767px;
-        margin-left: 16px;
-        margin-right: 16px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-        border-bottom: 1px solid #F1F1F3;
+    #header-top img {
+        margin: 10px 16px 10px auto;
     }
 
-    #header-bottom div nav {
+    #header-bottom div nav, .header--menu-close {
         display: none;
     }
 
-    #header--action .header--menu {
+    .header--menu {
         display: inline-block;
         background-image: url("../responsive/menu-icon.svg");
         background-repeat: no-repeat;
         background-position: center;
-        height: 34px;
-        width: 34px;
-    }
-
-    #toggle-menu:checked ~ header #header-bottom #header--action .header--menu {
-        display: none;
-    }
-
-    #toggle-menu:checked ~ header #header-bottom {
-        display: flex;
-        position: fixed;
-        margin: 0;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 90%;
-        background: #fff;
-        z-index: 9999;
-        border-radius: 50px 0 0 50px;
-        justify-content: space-between;
-        align-items: start;
-    }
-
-    #header-bottom nav {
-        margin-left: 0;
-    }
-
-    #toggle-menu:checked ~ header #header-bottom div nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding-top: 100px;
-        position: relative;
-    }
-
-    #toggle-menu:checked ~ header #header-bottom div nav ul {
-        width: 100%;
-        position: relative;
-        top: 0;
-        background: #FFFFFF;
-        border-top: 1px solid #F1F1F3;
-        display: flex;
-        flex-direction: column;
-        gap: 23px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #toggle-menu:checked ~ header #header-bottom div nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    #toggle-menu:checked ~ header #header-bottom div nav ul li:first-child {
-        margin-top: 25px;
-    }
-
-
-    #toggle-menu:checked ~ header #header-bottom div #header--logo
-    {
-        margin: 30px auto auto 19px;
-    }
-
-    #toggle-menu:checked ~ header #header-bottom #header--action {
-        margin: 30px 8px auto auto;
-    }
-
-    #toggle-menu:checked ~ header #header-bottom #header--action .header--sign
-    , #toggle-menu:checked ~ header #header-bottom #header--action .header--login {
-        display: none;
-    }
-
-    #toggle-menu:checked ~ header #header-bottom #header--action .header--menu-close {
-        display: inline-block;
-        background-image: url("../responsive/x-mark.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 34px;
-        width: 34px;
-    }
-
-    #toggle-menu:checked ~ header .modal-support-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(195, 194, 194);
-        z-index: 990;
+        height: 2.125rem;
+        width: 2.125rem;
+        margin-left: 1.25rem;
     }
 
     #toggle-menu:checked ~ header #header--action .header--menu {
-        display: none;
-    }
-
-    #header--action .header--menu-close {
         display: none;
     }
 
@@ -248,9 +122,87 @@ header {
         background-image: url("../responsive/x-mark.svg");
         background-repeat: no-repeat;
         background-position: center;
-        height: 34px;
-        width: 34px;
-        z-index: 10000;
+        height: 2.125rem;
+        width: 2.125rem;
+    }
+
+    #toggle-menu:checked ~ header {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #FFFFFF;
+        width: 90%;
+        height: 100%;
+        z-index: 9999;
+        border-radius: 50px 0 0 50px;
+        margin: 0 auto;
+
+    }
+
+    #toggle-menu:checked ~ header #header-top {
+        display: none;
+    }
+
+    /*#header-bottom {*/
+    /*    margin-left: 19px;*/
+    /*}*/
+
+    /*#header-bottom {*/
+    /*    margin-right: 8px;*/
+    /*}*/
+
+    #toggle-menu:checked ~ .modal-support-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(195, 194, 194);
+        z-index: 999;
+    }
+
+    #toggle-menu:checked ~ header #header--action a {
+        display: none;
+    }
+
+    #toggle-menu:checked ~ header #header-bottom div nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    #toggle-menu:checked ~ header #header-bottom div nav ul {
+        position: fixed;
+        width: 90%;
+        top: 109px;
+        right: 0;
+        margin-right: 0;
+        background: #FFFFFF;
+        /*border-top: 1px solid #F1F1F3;*/
+        display: block;
+        text-align: center;
+    }
+
+    #header-bottom div nav ul li:first-child ~ li {
+        margin-top: 20px;
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

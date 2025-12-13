@@ -7,10 +7,29 @@
 html {
     font-family: "Be Vietnam Pro", sans-serif;
 }
+
 body {
-    background-color: #F7F7F8;
+    background: #F7F7F8;
 }
 
 .test {
     height: 400px;
+}
+
+@media screen and (max-width: 767px) {
+    html {
+
+        font-size: 14px;
+    }
+
+    header {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    main {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
 }

@@ -2,8 +2,7 @@
 #container {
     width: 1600px;
     margin: 100px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
-    background: #FCFCFD;
-
+    background: #F7F7F8;
 }
 
 .container--nav {
@@ -57,3 +56,44 @@
     justify-content: center;
     align-items: center;
 }
+
+
+@media screen and (max-width: 768px) {
+    #container {
+        width: 100%;
+        margin-top: 40px;
+        /*background: #c4ff2f;*/
+    }
+
+    .container--nav {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        justify-content: flex-start;
+        background: #FCFCFD;
+    }
+
+    .container--car {
+        flex: 0 0 auto;
+        min-width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: center;
+    }
+
+    .container--car img {
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    .container--car + .container--car {
+        border-left: none;
+    }
+}
+
+
+
+
+
+
