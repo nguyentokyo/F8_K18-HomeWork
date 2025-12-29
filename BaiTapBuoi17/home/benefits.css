@@ -54,6 +54,7 @@
 .benefits-item {
     flex-shrink: 1;
     /*position: relative;*/
+    width: 100%;
 }
 .benefits-item-number {
     font-size: 80px;
@@ -67,13 +68,15 @@
     font-weight: 600;
     font-size: 24px;
     margin: 50px 0 14px 0;
-    width: 419px;
+    /*width: 419px;*/
 }
 
 .benefits-item-description {
     font-size: 18px;
     color: #4C4C4D;
-    width: 419px;
+    width: 100%;
+    /*max-width: 419px;*/
+    /*width: 419px;*/
 }
 
 .benefits-item-icon {
