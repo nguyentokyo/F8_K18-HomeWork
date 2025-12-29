@@ -157,6 +157,20 @@ ul {
         flex: 1 1 100%;
     }
 
+    .box11 > ul li {
+        font-size: 16px;
+    }
+
+    .box12-title {
+        font-size: 18px;
+    }
+
+    .box121 > ul li
+    , .box122 > ul li {
+        font-size: 14px;
+    }
+
+
 }
 
 

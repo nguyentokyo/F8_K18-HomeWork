@@ -1,6 +1,7 @@
 header {
     font-size: 18px;
     position: sticky;
+    top: 0; /* Thêm dòng này */
     z-index: 9999;
     background: #F7F7F8;
 }
