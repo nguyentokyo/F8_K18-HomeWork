@@ -76,10 +76,11 @@
     border-radius: 12px;
     text-align: center;
     border: 1px solid #F1F1F3;
+    width: 100%;
 }
 
 h4 {
-    padding: 12px 272px;
+    padding: 12px 0;
     background: #FFF9F0;
     border: 1px solid #FFEACC;
     border-radius: 6px;
@@ -115,11 +116,12 @@ h4 {
 .our-pricing-content ul {
     list-style: none;
     padding: 30px 40px 40px 40px;
+    width: 100%;
 }
 
 .our-pricing-content ul li {
-    width: 504px;
-    height: 60px;
+    /*width: 504px;*/
+    /*height: 60px;*/
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -168,3 +170,77 @@ h4 {
     font-weight: 600;
     color: #FFFFFF;
 }
+
+@media screen and (max-width: 768px) {
+    #our-pricing {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .our-pricing-heading {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .our-pricing-heading h2 {
+        font-size: 28px;
+    }
+
+    .our-pricing-title {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .our-pricing-title p {
+        width: 100%;
+        display: block;
+        font-size: 14px;
+    }
+
+    .our-pricing-title button {
+        margin-top: 0;
+        font-size: 14px;
+        padding: 12px 20px
+    }
+
+    .our-pricing-body {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .our-pricing-card {
+        padding: 20px;
+    }
+
+    .our-pricing-price {
+        margin: 30px auto;
+    }
+
+    .our-pricing-content {
+        padding: 30px 30px 0 30px;
+    }
+
+    .our-pricing-content ul {
+        padding: 20px 0 20px 0;
+    }
+
+    .our-pricing-price span:first-child {
+        font-size: 50px;
+    }
+
+    .our-pricing-content-title {
+        font-size: 18px;
+    }
+
+    .our-pricing-content ul li span {
+        font-size: 14px;
+    }
+
+    .our-pricing-content-btn p{
+        padding: 18px 0;
+        font-size: 14px;
+    }
+}
+

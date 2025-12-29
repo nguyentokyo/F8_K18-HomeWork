@@ -54,10 +54,10 @@
     background: #FFFFFF;
     border-radius: 12px;
     border: 1px solid #F1F1F3;
+    width: 100%;
 }
 
 .fqa-content-item {
-    width: 767px;
     margin: 50px;
 }
 
@@ -173,4 +173,63 @@
 , #toggle-question4:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-close
 , #toggle-question5:checked ~ .fqa-content-title .fqa-content-check .fqa-content-icon-close {
     display: block;
+}
+
+@media screen and (max-width: 768px) {
+    #fqa-support {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .fqa-header {
+        width: 100%;
+    }
+
+    .fqa-header h2 {
+        font-size: 28px;
+    }
+
+    .fqa-header button {
+        font-size: 14px;
+        padding: 14px 20px;
+    }
+
+    .fqa-main {
+        flex-direction: column;
+        margin: 40px 40px 40px 40px;
+        gap: 40px;
+    }
+
+    .fqa-content-item {
+        margin: 20px;
+    }
+
+    .fqa-content-title span:nth-child(1) {
+        font-size: 16px;
+    }
+
+    .fqa-content-icon-open
+    , .fqa-content-icon-close {
+        height: 40px;
+        width: 40px;
+    }
+
+    .fqa-content-body {
+        margin-top: 14px;
+        padding-top: 20px;
+        font-weight: 400;
+    }
+
+    .fqa-content-action-btn {
+        padding: 14px 20px;
+    }
+
+    .fqa-content-action-text {
+        font-size: 14px;
+    }
+
+    .fqa-content-icon-btn {
+        height: 40px;
+        width: 40px;
+    }
 }

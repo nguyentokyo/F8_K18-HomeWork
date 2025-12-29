@@ -2,6 +2,7 @@
     max-width: 1600px;
     margin: 100px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
 }
+
 .our-courses-heading {
     margin-bottom: 80px;
 }
@@ -53,7 +54,8 @@
 }
 
 .our-courses-image img {
-    width: 684px;
+    width: 100%;
+    max-width: 684px;
     height: 380px;
     object-fit: cover;      /*cắt ảnh cho vừa khít ko bị vỡ*/
     border-radius: 8px;
@@ -116,9 +118,77 @@
 }
 
 .our-courses-action a {
+    display: block;
+    text-align: center;
+    width: 100%;
     text-decoration: none;
     border: 1px solid #F1F1F3;
-    padding: 18px 295px;
+    padding: 18px 0;
     border-radius: 8px;
     background: #F7F7F8;
 }
+
+@media screen and (max-width: 768px) {
+    #our-courses {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .our-courses-heading {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .our-courses-heading h2 {
+        font-size: 28px;
+    }
+
+    .our-courses-title {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .our-courses-title p {
+        width: 100%;
+        display: block;
+        font-size: 14px;
+    }
+
+    .our-courses-title button {
+        margin-top: 10px;
+        font-size: 14px;
+        padding: 14px 20px;
+    }
+
+    .our-courses-container {
+        flex-direction: column;
+    }
+
+    .our-courses-card {
+        padding: 30px;
+    }
+
+    .our-courses-tag {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .tag-item ul li {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .tag-by {
+        font-size: 16px;
+    }
+
+    .our-courses-content h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+}
+

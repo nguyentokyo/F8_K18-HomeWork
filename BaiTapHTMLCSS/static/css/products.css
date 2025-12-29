@@ -1,0 +1,166 @@
+.home__products {
+    max-width: 1600px;
+    margin: 150px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
+}
+
+.home__products__heading h2 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.home__products__heading h2 span {
+    color: #CAFF33;
+}
+
+.home__products__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home__products__title p {
+    max-width: 56%;
+    font-size: 18px;
+    font-weight: 300;
+    color: #B3B3B3;
+}
+
+.home__products__btn {
+    background-color: #262626;
+    border-radius: 82px;
+}
+
+.home__products__btn--active {
+    display: flex;
+    margin: 14px;
+}
+
+.home__products__btn--active a {
+    display: inline-block;
+    padding: 14px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 140px;
+}
+
+.home__products__btn--active a:first-child {
+    background: #CAFF33;
+    color: #1C1C1C;
+}
+
+.home__products__btn--active a:nth-child(2) {
+    background: #262626;
+    color: #FFFFFF;
+}
+
+.home__products__body {
+    margin-top: 100px;
+}
+.home__products__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.home__products__card:nth-child(1)
+, .home__products__card:nth-child(2) {
+    border-right: 1px solid #262626;
+}
+
+.home__products__item {
+    padding-right: 50px;
+    text-align: center;
+}
+
+.home__products__item--icon {
+    margin-bottom: 30px;
+}
+
+.home__products__item h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.home__products__item p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #B3B3B3;
+}
+
+/* * * Thiet bi Table & Mobile: @media screen and (max-width: 991px) * * */
+@media screen and (max-width: 991px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+/* * * Thiet bi Mobile: @media screen and (max-width: 767px) * * */
+@media screen and (max-width: 767px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .home__products__heading {
+        text-align: center;
+    }
+
+    .home__products__heading h2 {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .home__products__title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home__products__title p {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .home__products__btn--active a:first-child
+    , .home__products__btn--active a:last-child {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .home__products__container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .home__products__body {
+        margin-top: 60px;
+    }
+
+    .home__products__card:nth-child(1)
+    , .home__products__card:nth-child(2) {
+        border-right: none;
+        border-bottom: 1px solid #262626;
+    }
+
+    .home__products__item {
+        padding-bottom: 30px;
+        padding-right: 0;
+    }
+
+    .home__products__item h3 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .home__products__item p {
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
+

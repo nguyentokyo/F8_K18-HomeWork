@@ -1,99 +1,114 @@
-
 #container {
-    width: 1600px;
-    margin: 100px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
+    max-width: 1600px;
+    width: 100%;
+    margin: 100px auto 0 auto;
     background: #F7F7F8;
 }
 
 .container--nav {
     display: flex;
-    padding: 30px;
+    padding: 0 30px;
     justify-content: space-between;
     align-items: center;
     height: 154px;
     border-radius: 12px;
-    border: 1px solid #F1F1F3
+    border: 1px solid #F1F1F3;
+    background: #FFF;
 }
 
 .container--car {
     flex: 1;
     display: flex;
     justify-content: center;
-
-}
-
-.container--car img {
-    padding: 30px 64px;
-}
-
-.container--car + .container--car {
-    border-left: 1px solid #F1F1F3
+    align-items: center;
 }
 
 #image {
-    width: 1600px;
-    margin: 0 auto;
-}
-.image--container {
+    width: 100%;
     margin-top: 100px;
-    height: 790px;
-    background-image: url("../images/image.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+}
+
+.image__container {
+    position: relative;
+    width: 100%;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.image__main {
+    width: 100%;
+}
+
+.image__main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .image--icon {
-    border-radius: 50px;
+    position: absolute;
+    z-index: 10;
     height: 72px;
     width: 72px;
-    border: 6px solid #FFFFFF4D;
-    background: #FFFFFF33;
+    background: rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.image--icon:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
 
 @media screen and (max-width: 768px) {
     #container {
-        width: 100%;
         margin-top: 40px;
-        /*background: #c4ff2f;*/
     }
 
     .container--nav {
-        display: flex;
-        align-items: center;
-        overflow-x: auto;
+        height: auto;
+        padding: 10px;
         justify-content: flex-start;
-        background: #FCFCFD;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 10px;
     }
 
     .container--car {
         flex: 0 0 auto;
-        min-width: 140px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: center;
+        border-left: none !important;
     }
 
     .container--car img {
-        padding: 16px;
-        max-width: 100%;
+        padding: 10px;
+        width: 100%;
     }
 
-    .container--car + .container--car {
-        border-left: none;
+    #image {
+        margin-top: 30px;
+    }
+
+    .image__container {
+        border-radius: 8px;
+    }
+
+    .image--icon img    {
+        height: 24px;
+        width: 24px;
+    }
+    .image--icon {
+        width: 50px;
+        height: 50px;
+        border-width: 4px;
     }
 }
-
-
-
-
-
-

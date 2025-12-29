@@ -1,5 +1,8 @@
 header {
     font-size: 18px;
+    position: sticky;
+    z-index: 9999;
+    background: #F7F7F8;
 }
 
 #header-top {
@@ -99,31 +102,24 @@ header {
         margin: 10px 16px 10px auto;
     }
 
+
+    .header--menu {
+        display: inline-block;
+    }
+
     #header-bottom div nav, .header--menu-close {
         display: none;
     }
 
-    .header--menu {
-        display: inline-block;
-        background-image: url("../responsive/menu-icon.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 2.125rem;
-        width: 2.125rem;
-        margin-left: 1.25rem;
-    }
-
-    #toggle-menu:checked ~ header #header--action .header--menu {
+    #toggle-menu:checked ~ header #header--action .header--menu
+    , #toggle-menu:checked ~ header #header--action .header--sign
+    , #toggle-menu:checked ~ header #header--action .header--login
+    , #toggle-menu:checked ~ header #header-top {
         display: none;
     }
 
     #toggle-menu:checked ~ header #header--action .header--menu-close {
         display: inline-block;
-        background-image: url("../responsive/x-mark.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 2.125rem;
-        width: 2.125rem;
     }
 
     #toggle-menu:checked ~ header {
@@ -132,63 +128,40 @@ header {
         top: 0;
         right: 0;
         background-color: #FFFFFF;
-        width: 90%;
+        width: 70%;
         height: 100%;
         z-index: 9999;
         border-radius: 50px 0 0 50px;
         margin: 0 auto;
-
     }
-
-    #toggle-menu:checked ~ header #header-top {
-        display: none;
-    }
-
-    /*#header-bottom {*/
-    /*    margin-left: 19px;*/
-    /*}*/
-
-    /*#header-bottom {*/
-    /*    margin-right: 8px;*/
-    /*}*/
 
     #toggle-menu:checked ~ .modal-support-overlay {
         position: fixed;
         inset: 0;
-        background: rgba(195, 194, 194);
+        background: #bcb4a1;
         z-index: 999;
     }
 
-    #toggle-menu:checked ~ header #header--action a {
-        display: none;
+    #toggle-menu:checked ~ header #header-bottom  {
+        padding : 50px 0 20px 20px;
     }
 
     #toggle-menu:checked ~ header #header-bottom div nav {
+        display: block;
+    }
+
+    #toggle-menu:checked ~ header #header-bottom div nav ul {
+        position: absolute;
+        top:150px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    #toggle-menu:checked ~ header #header-bottom div nav ul li {
         width: 100%;
-        position: relative;
-        border: none;
     }
-
-    #toggle-menu:checked ~ header #header-bottom div nav ul {
-        position: fixed;
-        width: 90%;
-        top: 109px;
-        right: 0;
-        margin-right: 0;
-        background: #FFFFFF;
-        /*border-top: 1px solid #F1F1F3;*/
-        display: block;
-        text-align: center;
-    }
-
-    #header-bottom div nav ul li:first-child ~ li {
-        margin-top: 20px;
-    }
-
 }
 
 
