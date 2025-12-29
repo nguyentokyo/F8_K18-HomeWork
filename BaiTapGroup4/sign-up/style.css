@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1A;
+    font-family: "Lexend", sans-serif;
+}
+
+.container {
+    max-width: 1596px;
+    margin: 0 auto;
+}
+
+.highlight {
+    color: #caff33;
+}
+
+.sign-up-card {
+    background-color: #1C1C1C;
+    padding: 50px 80px;
+    border-radius: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #262626;
+}
+
+.sign-up-header {
+    margin-bottom: 30px;
+}
+
+.sign-up-header h1 {
+    color: #caff33;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.sign-up-header p {
+    color: #b3b3b3;
+    font-size: 1rem;
+}
+
+.input-flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.field {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.field input {
+    width: 100%;
+    background: #1A1A1A;
+    border: 1px solid #333;
+    padding: 18px 25px;
+    border-radius: 50px;
+    color: white;
+    outline: none;
+}
+
+.password-field {
+    position: relative;
+}
+
+.eye {
+    position: absolute;
+    right: 25px;
+    top: 30%;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    width: 100%;
+    max-width: 500px;
+    padding: 16px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #caff33;
+    color: black;
+}
+
+.btn-secondary {
+    background: #262626;
+    color: white;
+    border: 1px solid #333;
+}
+
+.divider {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B3B3B3;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #333;
+    max-width: 150px;
+}
+
+.divider span {
+    padding: 0 25px;
+}
+
+.social-group {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 40px;
+}
+.social-item {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(202, 255, 51, 0.05) 0%, rgba(202, 255, 51, 0) 100%);
+}
+
+.testimonials-section {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+
+
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 80px;
+}
+
+.title-area h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.title-area p {
+    color: #999999;
+    font-size: 14px;
+    width: 80%;
+}
+
+.toggle-box {
+    background-color: #1C1C1C;
+    border: 1px solid #262626;
+    padding: 15px;
+    border-radius: 100px;
+    display: flex;
+}
+
+.t-btn {
+    white-space: nowrap;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.active {
+    background: #CAFF33;
+    color: #1C1C1C;
+    border-radius: 140px;
+}
+
+.testimonials-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.testimonials-list {
+    display: flex;
+    gap: 50px;
+    flex: 1;
+}
+
+.t-card {
+    flex: 1;
+    text-align: center;
+    border-top: 1px solid #262626;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.quote-wrapper {
+    margin-bottom: 30px;
+}
+
+.quote-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.t-card:first-child .testimonial-body {
+    background: linear-gradient(270deg, rgba(25, 25, 25, 0) 0%, #191919 105.84%);
+}
+
+.t-card:last-child .testimonial-body {
+    background: linear-gradient(270deg, #191919 10.8%, rgba(25, 25, 25, 0) 105.84%);
+}
+
+.author {
+    color: #caff33;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.arrow-btn {
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.arrow-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+@media screen and (max-width: 1630px) {
+    .container {
+        max-width: 98%;
+        margin: 0 2%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+
+    .sign-up-card {
+        padding: 40px 30px;
+        max-width: 100%;
+    }
+
+    .sign-up-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .input-row {
+        gap: 15px;
+    }
+
+    .field input {
+        padding: 20px;
+    }
+
+    .btn {
+        max-width: 50%;
+    }
+
+    .toggle-box {
+        padding: 10px;
+    }
+
+    .testimonials-section {
+        padding: 60px 0;
+    }
+
+    .section-header-flex {
+        margin-bottom: 50px;
+    }
+
+    .testimonials-container {
+        gap: 15px;
+    }
+
+    .testimonials-list {
+        gap: 20px;
+    }
+
+    .t-card {
+        padding-top: 40px;
+    }
+
+    .t-card p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .t-card:first-child .testimonial-body,
+    .t-card:last-child .testimonial-body {
+        opacity: 0.6;
+    }
+
+    .quote-wrapper img {
+        width: 40px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sign-up-card {
+        padding: 30px 20px;
+    }
+
+    .sign-up-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .input-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .field {
+        width: 100%;
+    }
+
+    .field input {
+        padding: 15px 20px;
+    }
+
+    .input-flex {
+        flex-direction: column;
+    }
+
+
+    .eye {
+        top: 25%;
+        right: 2%;
+    }
+
+    .form-actions {
+        width: 100%;
+    }
+
+    .btn {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .social-group {
+        gap: 20%;
+    }
+
+    .social-item {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonials-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .title-area p {
+        width: 100%;
+    }
+
+    .testimonials-list {
+        width: 100%;
+        flex: none;
+        flex-direction: column;
+        gap: 50px;
+        order: 1;
+    }
+
+    .arrow-btn {
+        order: 2;
+        width: 55px;
+        height: 55px;
+    }
+
+    .t-card:first-child,
+    .t-card:last-child {
+        display: none;
+    }
+
+    .t-card {
+        width: 100%;
+    }
+
+    .section-header-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .toggle-box {
+        width: 80%;
+    }
+
+    .t-btn {
+        flex: 1;
+        font-size: 12px;
+    }
+}

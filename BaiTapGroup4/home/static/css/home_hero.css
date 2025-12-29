@@ -1,0 +1,482 @@
+.home__hero {
+    max-width: 1600px;
+    margin: 153px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 7.5rem;
+}
+
+.home__hero__bar
+, .home__hero__detail
+{
+    width: 50%;
+}
+
+.home__hero_bar__tag {
+    display: flex;
+    align-items: center;
+    border-radius: 61px;
+    background: #262626;
+    width: fit-content;
+}
+
+.home__hero_bar__tag--icon {
+    margin: 10px 6px 10px 12px;
+}
+
+.home__hero_bar__tag--title {
+    margin: 10px 20px 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 14px;
+}
+
+h1 span {
+    color: #CAFF33;
+}
+
+.home__hero__bar p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.home__hero_bar__active {
+    margin-top: 50px;
+}
+
+.home__hero_bar__active a {
+    display: inline-block;
+    padding: 18px 30px;
+    background: #CAFF33;
+    color: #1C1C1C;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 82px;
+}
+
+/*2025/12/22*/
+.home__hero__body {
+    width: 50%;
+}
+
+.home__hero__body {
+    background-image: url("../images/heros/hero-bg.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: auto;
+}
+
+.home__hero__main {
+    /*background: seagreen;*/
+}
+
+.home__hero__group {
+    width: 80%;
+    /*background: rgba(255, 99, 71, 0.89);*/
+    background: #1A1A1A;
+    padding: 35px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #262626;
+}
+
+.home__hero__monthly {
+    position: absolute;
+    top: -43px;
+    left: -60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #22251B;
+    padding: 14px 17px;
+    border-radius: 10px;
+}
+
+.home__hero__monthly__detail span {
+    display: block;
+}
+
+.home__hero__monthly__detail span:nth-child(1) {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.home__hero__monthly__detail span:nth-child(2) {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.home__hero__your__items {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    border: 1px solid #262626;
+    padding: 14px;
+    background: #1C1C1C;
+}
+
+.home__hero__your__body {
+    width: 90%;
+}
+
+.home__hero__your__detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home__hero__your__card {
+    position: relative;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.home__hero__your__title {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.home__hero__monthly__detail--title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.home__hero__your__detail--price {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.home__hero__your__items {
+    position: absolute;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.home__hero__your__items:nth-child(1) {
+    top: 0;
+    z-index: 5;
+}
+
+.home__hero__your__items--overlay-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(27, 26, 26, 0.94));
+    z-index: 4;
+}
+
+.home__hero__your__items:nth-child(2) {
+    top: 53px;
+    z-index: 3;
+    width: 90%;
+    left: 5%;   /* Căn giữa thẻ: (100% - 90%) / 2 = 5% */
+    overflow: hidden;
+}
+
+.home__hero__your__items--overlay-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(27, 26, 26, 0.94));
+    z-index: 2;
+}
+
+.home__hero__your__items:nth-child(3) {
+    top: 106px;
+    z-index: 1;
+    width: 80%;
+    left: 10%;
+    overflow: hidden;
+}
+
+.home__hero__money {
+    margin-top: 25px;
+    /*background: #1C1C1C;*/
+}
+
+.home__hero__money h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+
+/*2025/12/24 nguyen add start*/
+.home__hero__national__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    background: #1C1C1C;
+}
+
+.home__hero__national__table td {
+    width: 50%;
+    padding: 18px;
+    vertical-align: top;
+}
+
+.home__hero__national__table td + td {
+    border-left: 1px solid #262626;
+}
+.home__hero__national__table tr + tr td {
+    border-top: 1px solid #262626;
+}
+
+.home__hero__national__colum {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.home__hero__national__colum__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.home__hero__national__money__row td {
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.home__hero__national__colum__header {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.home__hero__national__colum__detail {
+    font-size: 14px;
+    color: #E4E4E7;
+    font-weight: 300;
+}
+/*2025/12/24 nguyen end start*/
+
+.home__hero__btn {
+    margin-top: 25px;
+    text-align: center;
+    background: #22251B;
+    width: 100%;
+    border-radius: 72px;
+    padding: 13px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #D1FF4D;
+}
+
+.home__hero__active__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    width: 100%;
+}
+
+.home__hero__active__box {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    border-radius: 70px;
+    background: #22251B;
+    border: 1px solid transparent;
+    padding: 10px;
+}
+
+.home__hero__active__box1 {
+    font-size: 16px;
+}
+
+.home__hero__active__box2 {
+    background: #1A1A1A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 48px;
+}
+
+.home__hero__active__box22 {
+    display: flex;
+    align-items: center;
+}
+
+.home__hero__active__box22 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.home__hero__active__box22 a img {
+    display: block;
+    max-height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .home__hero {
+        gap: 100px;
+        margin: 60px;
+    }
+
+    .home__hero_bar__tag--title {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .home__hero__bar p {
+        font-size: 16px;
+    }
+
+    .home__hero {
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+    .home__hero__group {
+        width: 85%;
+    }
+
+    .home__hero__monthly__detail span:nth-child(1) {
+        font-size: 16px;
+    }
+
+    .home__hero__monthly__detail span:nth-child(2) {
+        font-size: 14px;
+    }
+
+    .home__hero__your__title {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .home__hero__monthly__detail--title {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .home__hero__your__detail--price {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .home__hero__national__nav
+    , .home__hero__national__money {
+        font-size: 16px;
+    }
+
+    .home__hero__national__colum__header {
+        font-size: 14px;
+    }
+
+    .home__hero__national__money__row td {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .home__hero {
+        margin: 60px;
+        flex-direction: column;
+    }
+
+    .home__hero__bar
+    , .home__hero__detail
+        , .home__hero__body
+    {
+        width: 100%;
+    }
+
+    .home__hero__bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .home__hero__bar p {
+        font-size: 14px;
+    }
+
+    .home__hero_bar__active a {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    .home__hero__body {
+        padding: 26px;
+    }
+
+    .home__hero__main {
+        padding: 0 26px;
+    }
+
+    .home__hero__group {
+        width: 100%;
+    }
+
+    .home__hero__monthly__detail span:nth-child(1) {
+        font-size: 14px;
+    }
+
+    .home__hero__monthly__detail span:nth-child(2) {
+        font-size: 14px;
+    }
+
+    .home__hero__your__detail--price {
+        font-size: 16px;
+    }
+
+    .home__hero__national__nav
+    , .home__hero__national__money {
+        font-size: 14px;
+    }
+}
+

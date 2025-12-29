@@ -1,0 +1,240 @@
+.home__features {
+    max-width: 1600px;
+    margin: 150px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
+}
+
+.home__features__heading {
+    margin-bottom: 80px;
+}
+.home__features__heading h2 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.home__features__heading h2 span {
+    color: #CAFF33;
+}
+
+.home__features__heading p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #B3B3B3;
+}
+
+.home__features__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.home__features_active {
+    background-color: #1C1C1C;
+    width: 20%;
+    border: 1px solid #1C1C1C;
+    border-radius: 12px;
+}
+
+.home__features_active ul {
+    padding: 50px;
+}
+
+.home__features_active ul li {
+    border: 1px solid #262626;
+    padding: 18px;
+    border-radius: 100px;
+    background: #1A1A1A;
+}
+
+.home__features_active ul li:nth-child(1)
+, .home__features_active ul li:nth-child(2) {
+    margin-bottom: 24px;
+}
+
+.home__features_active ul li a:hover {
+    color: #CAFF33;
+}
+
+.home__features_main {
+    /*background-color: #bfa050;*/
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.home__features_card {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.home__features_items {
+    background: #1C1C1C;
+    border-radius: 12px;
+    padding: 50px;
+    width: 100%;
+}
+
+.home__features__heard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.home__features__heard--title {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.home__features_detail span {
+    color: #B3B3B3;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* * * Thiet bi Table & Mobile: @media screen and (max-width: 991px) * * */
+@media screen and (max-width: 992px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .home__features {
+        margin: 60px auto 0 auto;
+    }
+
+    .home__features__heading {
+        margin-bottom: 60px;
+    }
+
+    .home__features__heading h2 {
+        font-size: 38px;
+    }
+
+    .home__features__heading p {
+        font-size: 16px;
+    }
+
+    .home__features__body
+    , .home__features_card {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .home__features_items {
+        padding: 25px;
+    }
+
+    .home__features_active {
+        width: 30%;
+    }
+
+    .home__features_main {
+        width: 70%;
+        gap: 20px;
+    }
+
+    .home__features_active ul {
+        padding: 20px;
+    }
+
+    .home__features_active ul li {
+        padding: 10px;
+    }
+
+    .home__features_active ul li:nth-child(1)
+    , .home__features_active ul li:nth-child(2) {
+        margin-bottom: 18px;
+    }
+
+    .home__features_active ul li a {
+        font-size: 14px;
+    }
+
+    .home__features__heard--title {
+        font-size: 18px;
+    }
+
+    .home__features_detail span {
+        font-size: 16px;
+    }
+}
+
+/* * * Thiet bi Mobile: @media screen and (max-width: 767px) * * */
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .home__features {
+        margin: 60px auto 0 auto;
+    }
+
+    .home__features__heading {
+        text-align: center;
+    }
+
+    .home__features__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .home__features_active {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .home__features_active ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .home__features_active ul li {
+        margin-bottom: 0 !important;
+        text-align: center;
+        padding: 12px 5px;
+        flex-shrink: 0;
+    }
+
+    .home__features_active ul li a {
+        font-size: 14px;
+        padding: 14px 20px;
+    }
+
+    .home__features_card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .home__features_main {
+        width: 100%;
+    }
+
+    .home__features_items {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .home__features__heard--title {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .home__features_detail {
+        font-size: 14px;
+        font-weight: 300;
+    }
+}

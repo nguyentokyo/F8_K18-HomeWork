@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1A;
+    font-family: "Lexend", sans-serif;
+}
+
+.container {
+    max-width: 1596px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1630px) {
+    .container {
+        max-width: 98%;
+        margin: 0 2%;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 98%;
+        margin: 0 3%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+        margin: 0 auto;
+    }
+}

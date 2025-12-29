@@ -1,0 +1,284 @@
+.our-benefits {
+    margin-top: 9.375rem;
+}
+
+.our-benefits__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-right: 18.75rem;
+}
+
+.our-benefits__content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.our-benefits__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.our-benefits__card__top, .our-benefits__card__bottom {
+    display: flex;
+    gap: 50px;
+}
+
+.our-benefits__card__top__left, .our-benefits__card__bottom__right, .our-benefits__card__top__right, .our-benefits__card__bottom__left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    padding: 3.125rem;
+    border-radius: 50px 20px 50px 20px;
+    border: 1px solid transparent;
+    background: linear-gradient(
+            267.5deg,
+            #1C1C1C 40.67%,
+            rgba(28, 28, 28, 0) 99.81%
+    ) padding-box,
+    linear-gradient(
+            106.06deg,
+            rgba(202, 255, 51, 0.05) -29.45%,
+            rgba(202, 255, 51, 0) 27.86%
+    ) padding-box,
+    linear-gradient(
+            280.49deg,
+            rgba(202, 255, 51, 0.1) 0%,
+            rgba(38, 38, 38, 0) 17.02%,
+            rgba(38, 38, 38, 0) 68.88%,
+            rgba(38, 38, 38, 0.1) 100%
+    ) border-box;
+}
+
+.dash {
+    width: 1px;
+    height: 336px;
+    background-image: linear-gradient(to bottom, #262626 10px, transparent 0);
+    background-size: 100% 20px;
+    opacity: 1;
+}
+
+.dash-width {
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to right, #262626 50%, transparent 50%);
+    background-size: 20px 100%;
+    opacity: 1;
+    border: none;
+}
+
+.our-benefits__card__top__right, .our-benefits__card__bottom__left {
+    border-radius: 20px 50px 20px 50px;
+}
+
+.our-benefits__card__text {
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+}
+
+.our-benefits__card__text h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.icon-wrap {
+    position: relative;
+    width: 74px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+.icon-wrap::before {
+    content: "";
+    position: absolute;
+    width: 98px;
+    height: 98px;
+    border-radius: 70px;
+    background: linear-gradient(
+            180deg,
+            rgba(202, 255, 51, 0.1) -66.22%,
+            rgba(202, 255, 51, 0) 85.46%
+    );
+}
+
+.icon-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+
+    border: 1px solid transparent;
+    background: /* Top Layer: The inner fill (stopped at padding edge) */ linear-gradient(
+            180deg,
+            rgba(202, 255, 51, 0.2) -173.65%,
+            rgba(202, 255, 51, 0) 87.22%
+    ) padding-box,
+    linear-gradient(
+            180deg,
+            rgba(202, 255, 51, 0.2) -173.65%,
+            rgba(202, 255, 51, 0) 87.22%
+    ) border-box;
+}
+
+@media screen and (max-width: 991px) {
+    .our-benefits {
+        margin-top: 7.5rem;
+    }
+
+    .our-benefits__text {
+        gap: 10px;
+        padding-right: 0;
+    }
+
+    .our-benefits__content {
+        gap: 60px;
+    }
+
+    .our-benefits__card {
+        gap: 30px;
+    }
+
+    .our-benefits__card__top__left, .our-benefits__card__bottom__left {
+        max-width: 100%;
+        padding: 2.5rem;
+        gap: 24px;
+        border-radius: 40px 14px 40px 14px;
+    }
+
+    .our-benefits__card__top__right, .our-benefits__card__bottom__right {
+        border-radius: 14px 40px 14px 40px;
+        max-width: 100%;
+        padding: 2.5rem;
+        gap: 24px;
+    }
+
+    .our-benefits__card__top, .our-benefits__card__bottom {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .our-benefits__card__text h3 {
+        font-size: 1.25rem;
+    }
+
+    .our-benefits__card__text {
+        gap: 14px;
+    }
+
+    .dash-width, .dash {
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to right, #262626 50%, transparent 50%);
+        background-size: 20px 100%;
+        opacity: 1;
+        border: none;
+    }
+
+    .icon-wrap::before {
+        width: 76px;
+        height: 76px;
+    }
+
+    .icon-wrap::after {
+        width: 60px;
+        height: 60px;
+        inset: auto;
+    }
+
+    .icon-wrap img {
+        width: 28px;
+        height: 28px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .our-benefits {
+        margin-top: 5rem;
+    }
+
+    .our-benefits__content {
+        gap: 60px;
+    }
+
+    .our-benefits__text {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .our-benefits__title {
+        font-size: 1.75rem;
+    }
+
+    .our-benefits__desc {
+        font-size: 0.875rem;
+    }
+
+    .our-benefits__card {
+        gap: 24px;
+    }
+
+    .our-benefits__card__top, .our-benefits__card__bottom {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .our-benefits__card__top__left, .our-benefits__card__bottom__right, .our-benefits__card__top__right, .our-benefits__card__bottom__left {
+        width: 100%;
+        border-radius: 40px 40px 14px 14px;
+        padding: 1.5rem;
+        gap: 20px;
+    }
+
+    .our-benefits__card__text {
+        gap: 10px;
+    }
+
+    .our-benefits__card__text h3 {
+        font-size: 1.125rem;
+    }
+
+    .icon-wrap img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .icon-wrap::before {
+        width: 72px;
+        height: 72px;
+    }
+
+    .icon-wrap::after {
+        width: 56px;
+        height: 56px;
+        inset: auto;
+    }
+
+    .dash {
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to right, #262626 50%, transparent 50%);
+        background-size: 20px 100%;
+        opacity: 1;
+        border: none;
+    }
+
+    .dash-width {
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to right, #262626 50%, transparent 50%);
+        background-size: 20px 100%;
+        opacity: 1;
+        border: none;
+    }
+}

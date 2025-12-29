@@ -1,0 +1,198 @@
+.home__header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.home__header__bar {
+    max-width: 1600px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #262626;
+    border-radius: 100px;
+    background: #1C1C1C;
+}
+
+.home__header__logo {
+    max-width: 34%;
+    margin: 20px auto 20px 30px;
+    flex-shrink: 1;
+}
+
+.home__header__nav {
+    max-width: 33%;
+    flex-shrink: 1;
+}
+
+.home__header__nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.625rem;
+}
+
+.home__header__nav ul li:hover {
+    background: #262626;
+    border-radius: 82px;
+}
+
+.home__header__nav ul li a {
+    display: block;
+    padding: 0.875rem 1rem;
+    font-size: 18px;
+}
+
+.home__header__active {
+    max-width: 33%;
+    display: flex;
+    justify-content: end;
+    margin: 20px 34px 20px auto;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.home__header__active--signup {
+    padding: 0.875rem 1.875rem 0.875rem 0;
+}
+
+.home__header__active--login {
+    padding: 0.875rem 1.875rem;
+    background: #CAFF33;
+    border-radius: 82px;
+    color: #1C1C1C;
+}
+
+.home__header__active--icon {
+    display: none;
+    padding: 0.375rem 0.875rem;
+    border-radius: 82px;
+    background: #CAFF33;
+}
+
+.home__header__menu--close
+, .home__header__menu--open {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .home__header__bar {
+        margin: 50px 16px;
+    }
+
+    .home__header__nav ul {
+        gap: 0.5rem;
+    }
+
+    .home__header__nav ul li a {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    .home__header__active {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home__header__bar {
+        margin: 50px 16px;
+    }
+
+    .home__header__nav {
+        display: none;
+    }
+
+    .home__header__active--signup
+    ,.home__header__active--login {
+        display: none;
+    }
+
+    .home__header__menu--open {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #CAFF33;
+        padding: 0.375rem 0.875rem;
+        border-radius: 82px;
+    }
+
+    .home__header__menu--close {
+        display: none;
+    }
+    #toggle-menu:checked ~ header .home__header__active .home__header__menu--open {
+        display: none;
+    }
+
+    #toggle-menu:checked ~ header .home__header__active .home__header__menu--close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #CAFF33;
+        padding: 0.375rem 0.875rem;
+        border-radius: 82px;
+        color: black;
+    }
+
+    #toggle-menu:checked ~ header {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #262626;
+        width: 70%;
+        height: 100%;
+        z-index: 9999;
+        border-radius: 50px 0 0 50px;
+        margin: 0 auto;
+    }
+
+    #toggle-menu:checked ~ .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgb(0, 0, 0);
+        z-index: 999;
+    }
+
+    #toggle-menu:checked ~ header .home__header__bar nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    #toggle-menu:checked ~ header .home__header__bar nav ul {
+        position: fixed;
+        width: 70%;
+        top: 100px;
+        right: 0;
+        margin-right: 0;
+        display: block;
+        text-align: center;
+    }
+
+    #toggle-menu:checked ~ header .home__header__bar {
+        /*border-radius: unset;*/
+        margin: 0;
+        border-radius: 50px 0 0 0;
+    }
+
+    .home__header__bar nav ul li {
+        padding: 0.8rem;
+    }
+
+    /*#header__bar nav ul li:first-child ~ li {*/
+    /*    margin-top: 20px;*/
+    /*}*/
+
+    header .home__header__bar nav ul li:active {
+        background: #1C1C1C;
+        border-radius: unset;
+    }
+}
+

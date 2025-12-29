@@ -1,0 +1,220 @@
+.home__faq {
+    max-width: 1600px;
+    margin: 150px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
+}
+
+.home__faq__heading h2 {
+    /*color: #CAFF33;*/
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.home__faq__heading h2 span {
+    color: #CAFF33;
+}
+
+.home__faq__heading p {
+    color: #B3B3B3;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 80px;
+}
+
+.home__faq__group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.home__faq__card {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.home__faq__items {
+    width: calc(50% - 15px);
+    /*background: seagreen;*/
+    border-radius: 14px;
+    border: 1px solid #262626
+}
+
+.home__faq__content {
+    padding: 50px;
+}
+
+.home__faq__item--title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #262626;
+}
+
+.home__faq__item--detail {
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 30px;
+    color: #B3B3B3;
+}
+
+.home__faq__card:last-child {
+    position: relative;
+    z-index: 1;
+    /*overflow: hidden;*/
+}
+
+.home__faq__card--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(27, 26, 26, 0.94));
+    z-index: 2;
+}
+
+.home__faq__active {
+    text-align: center;
+}
+
+.home__faq__active a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 24px;
+    border: 1px solid #262626;
+    background-color: #1C1C1C;
+    border-radius: 82px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .home__faq {
+        margin: 60px auto 0 auto;
+    }
+
+    .home__faq__heading h2 {
+        font-size: 38px;
+    }
+
+    .home__faq__heading p {
+        font-size: 16px;
+        margin-bottom: 60px;
+    }
+
+    .home__faq__group {
+        gap: 20px;
+    }
+
+    .home__faq__card {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .home__faq__items {
+        width: calc(50% - 10px);
+        /*background: seagreen;*/
+        border-radius: 14px;
+        border: 1px solid #262626
+    }
+
+
+    .home__faq__content {
+        padding: 30px;
+    }
+
+    .home__faq__item--title {
+        font-size: 18px;
+    }
+
+    .home__faq__item--detail {
+        font-size: 16px;
+    }
+
+    .home__faq__active a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .home__faq {
+        margin: 60px auto 0 auto;
+    }
+
+    .home__faq__heading {
+        margin: 80px auto 0 auto;
+    }
+
+    .home__faq__heading {
+        text-align: center;
+    }
+
+    .home__faq__heading h2 {
+        font-size: 28px;
+    }
+
+    .home__faq__heading p {
+        font-size: 14px;
+        margin-bottom: 60px;
+    }
+
+    .home__faq__card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home__faq__card
+    , .home__faq__items {
+        width: 100%;
+    }
+
+    .home__faq__content {
+        padding: 30px;
+    }
+
+    .home__faq__item--title {
+        font-size: 18px;
+    }
+
+    .home__faq__item--detail {
+        font-size: 14px;
+    }
+
+    .home__faq__card--overlay {
+        display: none;
+    }
+
+    .home__faq__items.last {
+        position: relative;
+    }
+
+    .home__faq__items--overlay {
+        position: absolute;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        top: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(27, 26, 26, 1) 100%);
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        z-index: 10;
+    }
+
+    .home__faq__active a {
+        font-size: 14px;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo HomePage Group4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/home_styles.css">
+    <link rel="stylesheet" href="static/css/home_headers.css">
+    <link rel="stylesheet" href="static/css/home_hero.css">
+    <link rel="stylesheet" href="static/css/home_products.css">
+    <link rel="stylesheet" href="static/css/home_cases.css">
+    <link rel="stylesheet" href="static/css/home_features.css">
+    <link rel="stylesheet" href="static/css/home_faq.css">
+    <link rel="stylesheet" href="static/css/home_testimonials.css">
+    <link rel="stylesheet" href="static/css/home_footers.css">
+</head>
+<body>
+    <!--start header-->
+    <input type="checkbox" id="toggle-menu" hidden>
+    <header class="home__header">
+        <div  class="home__header__bar__fixed">
+            <div class="home__header__bar">
+                <div class="home__header__logo">
+                    <a href="#">
+                        <img src="static/icons/home/logo-page.svg" alt="logo">
+                    </a>
+                </div>
+                <nav class="home__header__nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="../career/index.html">Careers</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="../security/index.html">Security</a></li>
+                    </ul>
+                </nav>
+                <div class="home__header__active">
+                    <a class="home__header__active--signup" href="../sign-up/index.html">Sign Up</a>
+                    <a class="home__header__active--login" href="../login/index.html">Login</a>
+                    <label for="toggle-menu" class="home__header__menu--open">
+                        <img src="static/icons/home/header-btn-icon.svg" alt="header-btn-icon">
+                    </label>
+                    <label for="toggle-menu" class="home__header__menu--close">
+                        <img src="static/icons/home/x-mark.svg" alt="x-mark">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="overlay"></div>
+    <!--end header-->
+
+    <!--start banner-->
+    <div class="home__hero container">
+        <div class="home__hero__bar">
+            <div class="home__hero_bar__tag">
+                <div class="home__hero_bar__tag--icon">
+                    <img src="static/icons/heros/hero_icon.svg" alt="hero_icon">
+                </div>
+                <div class="home__hero_bar__tag--title">No LLC Required, No Credit Check.</div>
+            </div>
+            <h1>Welcome to YourBank Empowering Your <span>Financial Journey</span></h1>
+            <p>At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.</p>
+            <div class="home__hero_bar__active">
+                <a href="">Open Account</a>
+            </div>
+        </div>
+        <div class="home__hero__body">
+            <div class="home__hero__main">
+                <div class="home__hero__group">
+                    <div class="home__hero__monthly">
+                        <div class="home__hero__monthly--icon">
+                            <img src="static/icons/heros/monthly-icon.svg" alt="monthly-icon">
+                        </div>
+                        <div class="home__hero__monthly__detail">
+                            <span>+ $5000,00</span>
+                            <span>Monthly Income</span>
+                        </div>
+                    </div>
+                    <div class="home__hero__your">
+                        <h4>Your Transactions</h4>
+                        <div class="home__hero__your__card">
+                            <div class="home__hero__your__items">
+                                <div class="home__hero__your--icon">
+                                    <img src="static/icons/heros/your-icon.svg" alt="your-icon-icon">
+                                </div>
+                                <div class="home__hero__your__body">
+                                    <div class="home__hero__your__title">Transaction</div>
+                                    <div class="home__hero__your__detail">
+                                        <div class="home__hero__monthly__detail--title">Joel Kenley</div>
+                                        <div class="home__hero__your__detail--price">-$68.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home__hero__your__items">
+                                <div class="home__hero__your--icon">
+                                    <img src="static/icons/heros/your-icon.svg" alt="your-icon-icon">
+                                </div>
+                                <div class="home__hero__your__body">
+                                    <div class="home__hero__your__title">Transaction</div>
+                                    <div class="home__hero__your__detail">
+                                        <div class="home__hero__monthly__detail--title">Joel Kenley</div>
+                                        <div class="home__hero__your__detail--price">-$68.00</div>
+                                    </div>
+                                </div>
+
+                                <div class="home__hero__your__items--overlay-2"></div>
+                            </div>
+                            <div class="home__hero__your__items">
+                                <div class="home__hero__your--icon">
+                                    <img src="static/icons/heros/your-icon.svg" alt="your-icon-icon">
+                                </div>
+                                <div class="home__hero__your__body">
+                                    <div class="home__hero__your__title">Transaction</div>
+                                    <div class="home__hero__your__detail">
+                                        <div class="home__hero__monthly__detail--title">Joel Kenley</div>
+                                        <div class="home__hero__your__detail--price">-$68.00</div>
+                                    </div>
+                                </div>
+                                <div class="home__hero__your__items--overlay-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home__hero__money">
+                        <h4>Money Exchange</h4>
+                        <div class="home__hero__national">
+                            <table class="home__hero__national__table">
+                                <tr>
+                                    <td>
+                                        <div class="home__hero__national__colum">
+                                            <div class="home__hero__national__colum__header">
+                                                <div class="home__hero__national__colum__header--icon">
+                                                    <img src="static/icons/heros/money-irn-icon.svg" alt="money-irn-icon">
+                                                </div>
+                                                <span>INR</span>
+                                            </div>
+                                            <div class="home__hero__national__colum__detail">Indian Rupees</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="home__hero__national__colum">
+                                            <div class="home__hero__national__colum__header">
+                                                <div class="home__hero__national__colum__header--icon">
+                                                    <img src="static/icons/heros/money-usd-icon.svg" alt="money-irn-icon">
+                                                </div>
+                                                <span>USA</span>
+                                            </div>
+                                            <div class="home__hero__national__colum__detail">United States Dollar</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="home__hero__national__money__row">
+                                    <td>5,0000</td>
+                                    <td>12.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="home__hero__btn">
+                        <a href="">Exchange</a>
+                    </div>
+                </div>
+
+                <div class="home__hero__active">
+                    <div class="home__hero__active__btn">
+                        <div  class="home__hero__active__box">
+                            <div class="home__hero__active__box1">Supported Currency</div>
+                            <div class="home__hero__active__box2">
+                                <div class="home__hero__active__box22">
+                                    <a href="">
+                                        <img src="static/icons/heros/box22-1-icon.svg" alt="box22-1">
+                                    </a>
+                                </div>
+                                <div class="home__hero__active__box22">
+                                    <a href="">
+                                        <img src="static/icons/heros/box22-2-icon.svg" alt="box22-2">
+                                    </a>
+                                </div>
+                                <div class="home__hero__active__box22">
+                                    <a href="">
+                                        <img src="static/icons/heros/box22-3-icon.svg" alt="box22-3">
+                                    </a>
+                                </div>
+                                <div class="home__hero__active__box22">
+                                    <a href="">
+                                        <img src="static/icons/heros/box22-4-icon.svg" alt="box22-4">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end banner-->
+
+    <!--start products-->
+    <div class="home__products container">
+        <div class="home__products__heading">
+            <h2>Our <span>Products</span></h2>
+            <div class="home__products__title">
+                <p>Discover a range of comprehensive and customizable banking products at YourBank, designed to suit your unique financial needs and aspirations</p>
+                <div class="home__products__btn">
+                    <div class="home__products__btn--active">
+                        <a href="">For Individuals</a>
+                        <a href="">For Businesses</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home__products__body">
+            <div class="home__products__container">
+                <div class="home__products__card">
+                    <div class="home__products__item">
+                        <div class="home__products__item--icon">
+                            <img src="static/icons/products/products_check_icon.svg" alt="check">
+                        </div>
+                        <h4>Checking Accounts</h4>
+                        <p>Enjoy easy and convenient access to your funds with our range of checking account options. Benefit from features such as online and mobile banking, debit cards, and free ATM access.</p>
+                    </div>
+                </div>
+                <div class="home__products__card">
+                    <div class="home__products__item">
+                        <div class="home__products__item--icon">
+                            <img src="static/icons/products/products_saving_icon.svg" alt="check">
+                        </div>
+                        <h4>Savings Accounts</h4>
+                        <p>Build your savings with our competitive interest rates and flexible savings account options. Whether you're saving for a specific goal or want to grow your wealth over time, we have the right account for you.</p>
+                    </div>
+                </div>
+                <div class="home__products__card">
+                    <div class="home__products__item">
+                        <div class="home__products__item--icon">
+                            <img src="static/icons/products/products_loans_icon.svg" alt="check">
+                        </div>
+                        <h4>Loans and Mortgages</h4>
+                        <p>Realize your dreams with our flexible loan and mortgage options. From personal loans to home mortgages, our experienced loan officers are here to guide you through the application process and help you secure the funds you need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end products-->
+
+    <!--start container-->
+    <div class="home__cases container">
+        <div class="home__cases__heading">
+            <h2>Use Cases</h2>
+            <p>At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions</p>
+        </div>
+
+        <div class="home__cases__body">
+            <div class="home__cases__container">
+                <div class="home__cases__left">
+                    <div class="home__cases__left__group">
+                        <div class="home__cases__left__card">
+                            <div class="home__cases__left__item">
+                                <div class="home__cases__left__item--icon">
+                                    <img src="static/icons/cases/cases-magaging-icon.svg" alt="magaging">
+                                </div>
+                                <div class="home__cases__left__item--title">
+                                    <span>Managing Personal Finances</span>
+                                </div>
+                            </div>
+                            <div class="home__cases__left__item">
+                                <div class="home__cases__left__item--icon">
+                                    <img src="static/icons/cases/cases-saving-icon.svg" alt="saving">
+                                </div>
+                                <div class="home__cases__left__item--title">
+                                    <span>Saving for the Future</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home__cases__left__card">
+                            <div class="home__cases__left__item">
+                                <div class="home__cases__left__item--icon">
+                                    <img src="static/icons/cases/cases-home-icon.svg" alt="home-icon">
+                                </div>
+                                <div class="home__cases__left__item--title">
+                                    <span>Homeownership</span>
+                                </div>
+                            </div>
+                            <div class="home__cases__left__item">
+                                <div class="home__cases__left__item--icon">
+                                    <img src="static/icons/cases/cases-education-icon.svg" alt="education">
+                                </div>
+                                <div class="home__cases__left__item--title">
+                                    <span>Education Funding</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__cases__right">
+                    <div class="home__cases_right__group">
+                        <div class="home__cases__right__heading">
+                            <h3>For Individuals</h3>
+                            <p>For individuals, our mortgage services pave the way to homeownership, and our flexible personal loans provide vital support during various life milestones. We also prioritize retirement planning, ensuring a financially secure future for our customers</p>
+                        </div>
+
+                        <div class="home__cases__right__body">
+                            <div class="home__cases__right__body__items">
+                                <div class="home__cases__right__body__items--title">78%</div>
+                                <div class="home__cases__right__body__items--detail">Secure Retirement Planning</div>
+                            </div>
+                            <div class="home__cases__right__body__items--line">
+<!--                                <img src="static/images/cases/case-line-image.svg" alt="case-line-image">-->
+                            </div>
+                            <div class="home__cases__right__body__items">
+                                <div class="home__cases__right__body__items--title">63%</div>
+                                <div class="home__cases__right__body__items--detail">Manageable Debt Consolidation</div>
+                            </div>
+                            <div class="home__cases__right__body__items--line">
+<!--                                <img src="static/images/cases/case-line-image.svg" alt="case-line-image">-->
+                            </div>
+                            <div class="home__cases__right__body__items">
+                                <div class="home__cases__right__body__items--title">91%</div>
+                                <div class="home__cases__right__body__items--detail">Reducing financial burdens</div>
+                            </div>
+                        </div>
+
+                        <div class="home__cases__right__active">
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home__cases__container">
+                <div class="home__cases__right">
+                    <div class="home__cases_right__group">
+                        <div class="home__cases__right__heading">
+                            <h3>For Business</h3>
+                            <p> For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them</p>
+                        </div>
+
+                        <div class="home__cases__right__body">
+                            <div class="home__cases__right__body__items">
+                                <div class="home__cases__right__body__items--title">65%</div>
+                                <div class="home__cases__right__body__items--detail">Cash Flow Management</div>
+                            </div>
+                            <div class="home__cases__right__body__items--line">
+<!--                                <img src="static/images/cases/case-line-image.svg" alt="case-line-image">-->
+                            </div>
+                            <div class="home__cases__right__body__items">
+                                <div class="home__cases__right__body__items--title">70%</div>
+                                <div class="home__cases__right__body__items--detail">Drive Business Expansion</div>
+                            </div>
+                            <div class="home__cases__right__body__items--line">
+<!--                                <img src="static/images/cases/case-line-image.svg" alt="case-line-image">-->
+                            </div>
+                            <div class="home__cases__right__body__items">
+                                <div class="home__cases__right__body__items--title">45%</div>
+                                <div class="home__cases__right__body__items--detail">Streamline payroll processing</div>
+                            </div>
+                        </div>
+
+                        <div class="home__cases__right__active">
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__cases__left">
+                    <div class="home__cases__left__group--sub">
+                        <div class="home__cases__left__card">
+                            <div class="home__cases__left__item">
+                                <div class="home__cases__left__item--icon">
+                                    <img src="static/icons/cases/case-startups-icon.svg" alt="startups">
+                                </div>
+                                <div class="home__cases__left__item--title">
+                                    <span>Startups and Entrepreneurs</span>
+                                </div>
+                            </div>
+                            <div class="home__cases__left__item">
+                                <div class="home__cases__left__item--icon">
+                                    <img src="static/icons/cases/case-cash-icon.svg" alt="cash">
+                                </div>
+                                <div class="home__cases__left__item--title">
+                                    <span>Cash Flow Management</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home__cases__left__card">
+                            <div class="home__cases__left__item">
+                                <div class="home__cases__left__item--icon">
+                                    <img src="static/icons/cases/case-business-icon.svg" alt="business-icon">
+                                </div>
+                                <div class="home__cases__left__item--title">
+                                    <span>Business Expansion</span>
+                                </div>
+                            </div>
+                            <div class="home__cases__left__item">
+                                <div class="home__cases__left__item--icon">
+                                    <img src="static/icons/cases/case-payment-icon.svg" alt="payment-icon">
+                                </div>
+                                <div class="home__cases__left__item--title">
+                                    <span>Payment Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end container-->
+
+    <!--start features-->
+    <div class="home__features container">
+        <div class="home__features__heading">
+            <h2>Our <span>Features</span></h2>
+            <p>At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions</p>
+        </div>
+        <div class="home__features__body">
+            <div class="home__features_active">
+                <ul>
+                    <li><a href="">Online Banking</a></li>
+                    <li><a href="">Financial Tools</a></li>
+                    <li><a href="">Customer Support</a></li>
+                </ul>
+            </div>
+            <div class="home__features_main">
+                <div class="home__features_card">
+                    <div class="home__features_items">
+                        <div class="home__features__heard">
+                            <div class="home__features__heard--title">24/7 Account Access</div>
+                            <div class="home__features__heard--icon">
+                                <a href=""><img src="static/icons/features/Icon.svg" alt="featuresIcon"></a>
+                            </div>
+                        </div>
+                        <div class="home__features_detail">
+                            <span>Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease.</span>
+                        </div>
+                    </div>
+                    <div class="home__features_items">
+                        <div class="home__features__heard">
+                            <div class="home__features__heard--title">Mobile Banking App</div>
+                            <div class="home__features__heard--icon">
+                                <a href=""><img src="static/icons/features/Icon.svg" alt="featuresIcon"></a>
+                            </div>
+                        </div>
+                        <div class="home__features_detail">
+                            <span>Stay connected to your finances on the go with our user-friendly mobile banking app. Easily manage your accounts, deposit checks, and make payments from your smartphone or tablet.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="home__features_card">
+                    <div class="home__features_items">
+                        <div class="home__features__heard">
+                            <div class="home__features__heard--title">Secure Transactions</div>
+                            <div class="home__features__heard--icon">
+                                <a href=""><img src="static/icons/features/Icon.svg" alt="featuresIcon"></a>
+                            </div>
+                        </div>
+                        <div class="home__features_detail">
+                            <span>Rest assured knowing that your transactions are protected by industry-leading security measures. We employ encryption and multi-factor authentication to safeguard your financial information.</span>
+                        </div>
+                    </div>
+                    <div class="home__features_items">
+                        <div class="home__features__heard">
+                            <div class="home__features__heard--title">Bill Pay and Transfers</div>
+                            <div class="home__features__heard--icon">
+                                <a href=""><img src="static/icons/features/Icon.svg" alt="featuresIcon"></a>
+                            </div>
+                        </div>
+                        <div class="home__features_detail">
+                            <span>Save time and avoid late fees with our convenient bill pay service. Set up recurring payments or make one-time transfers between your accounts with just a few clicks.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end features-->
+
+    <!--start faq-->
+    <div class="home__faq container">
+        <div class="home__faq__heading">
+            <h2><span>Frequently</span> Asked Questions</h2>
+            <p>Still you have any questions? Contact our Team via support@yourbank.com</p>
+        </div>
+
+        <div class="home__faq__body">
+            <div class="home__faq__group">
+                <div class="home__faq__card">
+                    <div class="home__faq__items">
+                        <div class="home__faq__content">
+                            <div class="home__faq__item--title">How do I open an account with YourBank?</div>
+                            <div class="home__faq__item--detail">Opening an account with YourBank is easy. Simply visit our website and click on the "Open an Account" button. Follow the prompts, provide the required information, and complete the application process. If you have any questions or need assistance, our customer support team is available to help.</div>
+                        </div>
+                    </div>
+                    <div class="home__faq__items">
+                        <div class="home__faq__content">
+                            <div class="home__faq__item--title">What documents do I need to provide to apply for a loan?</div>
+                            <div class="home__faq__item--detail">The documents required for a loan application may vary depending on the type of loan you are applying for. Generally, you will need to provide identification documents (such as a passport or driver's license), proof of income (such as pay stubs or tax returns), and information about the collateral (if applicable). Our loan officers will guide you through the specific requirements during the application process.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home__faq__card">
+                    <div class="home__faq__items">
+                        <div class="home__faq__content">
+                            <div class="home__faq__item--title">How do I open an account with YourBank?</div>
+                            <div class="home__faq__item--detail">Opening an account with YourBank is easy. Simply visit our website and click on the "Open an Account" button. Follow the prompts, provide the required information, and complete the application process. If you have any questions or need assistance, our customer support team is available to help.</div>
+                        </div>
+                    </div>
+                    <div class="home__faq__items last">
+                        <div class="home__faq__content">
+                            <div class="home__faq__item--title">What documents do I need to provide to apply for a loan?</div>
+                            <div class="home__faq__item--detail">The documents required for a loan application may vary depending on the type of loan you are applying for. Generally, you will need to provide identification documents (such as a passport or driver's license), proof of income (such as pay stubs or tax returns), and information about the collateral (if applicable). Our loan officers will guide you through the specific requirements during the application process.</div>
+                        </div>
+                        <div class="home__faq__items--overlay"></div>
+                    </div>
+                    <div class="home__faq__card--overlay"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home__faq__active">
+            <a href="">Load All FAQ’s
+                <img src="static/icons/faq/faq-icon.svg" alt="faq-icon">
+            </a>
+        </div>
+    </div>
+    <!--end faq-->
+
+    <!--start testimonials-->
+    <div class="home__testimonials container">
+        <div class="home__testimonials__heading">
+            <h2>Our <span>Testimonials</span></h2>
+            <div class="home__testimonials__title">
+                <p>Discover how YourBank has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
+                <div class="home__testimonials__btn">
+                    <div class="home__testimonials__btn--active">
+                        <a href="">For Individuals</a>
+                        <a href="">For Businesses</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home__testimonials__body">
+            <input type="radio" name="testimonial-slide" id="toggle-anime1" checked hidden>
+            <input type="radio" name="testimonial-slide" id="toggle-anime2" hidden>
+            <input type="radio" name="testimonial-slide" id="toggle-anime3" hidden>
+            <div class="home__testimonials__previous">
+                <label for="toggle-anime1" class="home__testimonials--previous">
+                    <img src="static/icons/testimonials/previous.svg" alt="previous">
+                </label>
+            </div>
+            <div class="home__testimonials__anime">
+                <div class="home__testimonials__card">
+                    <div class="home__testimonials__shadow-overlay"></div>
+                    <div class="home__testimonials__items">
+                        <div class="home__testimonials__item--icon">
+                        </div>
+                        <div class="home__testimonials__item--detail">
+                            <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.
+                            </p>
+                        </div>
+                        <div class="home__testimonials__item--bottom">
+                            <span>John D1</span>
+                        </div>
+                    </div>
+                    <div class="home__testimonials__items">
+                        <div class="home__testimonials__item--icon">
+                        </div>
+                        <div class="home__testimonials__item--detail">
+                            <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.
+                            </p>
+                        </div>
+                        <div class="home__testimonials__item--bottom">
+                            <span>John D2</span>
+                        </div>
+                    </div>
+                    <div class="home__testimonials__items">
+                        <div class="home__testimonials__item--icon">
+                        </div>
+                        <div class="home__testimonials__item--detail">
+                            <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.
+                            </p>
+                        </div>
+                        <div class="home__testimonials__item--bottom">
+                            <span>John D3</span>
+                        </div>
+                    </div>
+                    <div class="home__testimonials__items">
+                        <div class="home__testimonials__item--icon">
+                        </div>
+                        <div class="home__testimonials__item--detail">
+                            <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.
+                            </p>
+                        </div>
+                        <div class="home__testimonials__item--bottom">
+                            <span>John D4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home__testimonials__next">
+                <label for="toggle-anime2" class="home__testimonials--next">
+                    <img src="static/icons/testimonials/next.svg" alt="next">
+                </label>
+            </div>
+            <div class="home__testimonials__controls">
+                <div class="home__testimonials__previous">
+                    <label for="toggle-anime1" class="home__testimonials--previous prev-to-1">
+                        <img src="static/icons/testimonials/previous.svg" alt="previous">
+                    </label>
+                    <label for="toggle-anime2" class="home__testimonials--previous prev-to-2">
+                        <img src="static/icons/testimonials/previous.svg" alt="previous">
+                    </label>
+                </div>
+                <div class="home__testimonials__next">
+                    <label for="toggle-anime2" class="home__testimonials--next next-to-1">
+                        <img src="static/icons/testimonials/next.svg" alt="next">
+                    </label>
+                    <label for="toggle-anime3" class="home__testimonials--next next-to-2">
+                        <img src="static/icons/testimonials/next.svg" alt="next">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="home__testimonials__footer">
+            <div class="home__testimonials__footer__group">
+                <div class="home__testimonials__footer__card">
+                    <div class="home__testimonials__footer__items">
+                        <h3>Start your financial journey with <span>YourBank today!</span></h3>
+                        <p>Ready to take control of your finances? Join YourBank now, and let us help you achieve your financial goals with our tailored solutions and exceptional customer service</p>
+                    </div>
+                    <div class="home__testimonials__footer__actions">
+                        <a href="">Open Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end testimonials-->
+</body>
+<footer>
+    <!--start footer-->
+    <div class="home__footer container">
+        <div class="home__footer__main">
+            <div class="home__footer__header">
+                <div class="home__footer__header--logo">
+                    <a href="#">
+                        <img src="static/icons/home/logo-page.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="home__footer__header--menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="../career/index.html">Careers</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="../security/index.html">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="home__footer__body">
+                <ul>
+                    <li>
+                        <div class="box11-icon box11-mail"></div>
+                        <a href="mailto:hello@skillbridge.com">hello@skillbridge.com</a>
+                    </li>
+                    <li>
+                        <div class="box11-icon box11-tel"></div>
+                        <a href="tel:+9191813232309">+91 91813 23 2309</a>
+                    </li>
+                    <li>
+                        <div class="box11-icon box11-map"></div>
+                        <a href="">Somewhere in the World</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="home__footer__sns">
+                <div class="home__footer__sns__body">
+                    <div class="home__footer__sns__group">
+                        <ul>
+                            <li>
+                                <a href="#" class="box123-icon">
+                                    <img src="static/icons/footers/face-Icon.svg" alt="facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="box123-icon">
+                                    <img src="static/icons/footers/x-Icon.svg" alt="Twitter">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="box123-icon">
+                                    <img src="static/icons/footers/linked-icon.svg" alt="linked">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="home__footer__sns__detail">YourBank All Rights Reserved</div>
+                    <div class="home__footer__sns__sub">
+                        <div class="home__footer__sns__sub--R">
+                            <a href="">Privacy Policy</a>
+                        </div>
+                        <div class="home__footer__sns__sub--L">
+                            <a href="">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end footer-->
+</footer>
+</html>

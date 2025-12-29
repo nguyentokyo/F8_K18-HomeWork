@@ -1,0 +1,120 @@
+.our-values {
+    margin-top: 9.375rem;
+}
+
+.our-values__content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.our-values__card {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.our-values__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-right: 18.75rem;
+}
+
+.our-values__card__top, .our-values__card__bottom {
+    display: flex;
+    gap: 80px;
+}
+
+.our-values__card__top__left, .our-values__card__top__right, .our-values__card__bottom__left, .our-values__card__bottom__right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 758px;
+    border-left: 1px solid #CAFF33;
+    padding-left: 1.875rem;
+}
+
+.our-values__card__highlight {
+    color: #4C4C4D;
+    font-weight: 500;
+    font-size: 3.625rem;
+}
+
+@media screen and (max-width: 991px) {
+    .our-values {
+        margin-top: 7.5rem;
+    }
+    .our-values__text {
+        gap: 10px;
+        padding-right: 0;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .desc {
+        font-size: 1rem;
+    }
+    .our-values__content {
+        gap: 60px;
+    }
+    .our-values__card__top__left, .our-values__card__top__right, .our-values__card__bottom__left, .our-values__card__bottom__right {
+        max-width: 100%;
+        padding-left: 1.5rem;
+        gap: 20px;
+    }
+    .our-values__card__highlight {
+        font-size: 1.75rem;
+    }
+    .our-values__card__top, .our-values__card__bottom {
+        gap: 60px;
+    }
+    .our-values__card {
+        gap: 60px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .our-values {
+        margin-top: 5rem;
+    }
+
+    .our-values__card {
+        gap: 50px;
+    }
+    .our-values__content {
+        gap: 50px;
+    }
+
+    .our-values__text {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .our-values__title {
+        font-size: 1.75rem;
+    }
+
+    .our-values__desc {
+        font-size: 0.875rem;
+    }
+    .our-values__card__top, .our-values__card__bottom {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .our-values__card__top__left, .our-values__card__top__right, .our-values__card__bottom__left, .our-values__card__bottom__right {
+        padding-left: 1.25rem;
+        gap: 14px
+    }
+    .our-values__card__highlight {
+        font-size: 1.875rem;
+    }
+    .desc {
+        font-size: 0.875rem;
+    }
+}

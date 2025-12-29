@@ -1,0 +1,315 @@
+.home__cases {
+    max-width: 1600px;
+    margin: 150px auto 0 auto; /* top = 100px, left/right = auto, bottom = 0 */
+}
+
+.home__cases__heading h2 {
+    color: #CAFF33;
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.home__cases__heading p {
+    color: #B3B3B3;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 80px;
+}
+
+.home__cases__body {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.home__cases__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.home__cases__left
+, .home__cases__right {
+    width: 50%;
+}
+
+.home__cases__left {
+    background-color: #1C1C1C;
+    border-radius: 20px;
+    border: 1px solid #1C1C1C;
+}
+
+.home__cases__left__group {
+    background-image: url("../images/cases/case-image.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 50px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home__cases__left__card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.home__cases__left__item {
+    width: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 222px;
+    background: #1A1A1A;
+    border-radius: 16px;
+    border: 1px solid #262626;
+}
+
+.home__cases__left__item--icon {
+    padding: 30px 118px 24px 118px;
+}
+
+.home__cases__left__item--title {
+    padding: 0 30px 30px 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.home__cases_right__group {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.home__cases__right__heading
+, .home__cases__right__body {
+    margin-bottom: 62px;
+}
+
+.home__cases__right__heading h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+}
+
+.home__cases__right__heading p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #B3B3B3;
+}
+
+.home__cases__right__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.home__cases__right__body__items--title {
+    font-size: 58px;
+    font-weight: 500;
+    color: #CAFF33;
+    margin-bottom: 5px;
+}
+
+.home__cases__right__body__items--detail {
+    font-size: 18px;
+    font-weight: 300;
+    color: #B3B3B3;
+    border: 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.home__cases__right__body__items--line {
+    background-image: url("../images/cases/case-line-image.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 1px;
+    height: 147px;
+}
+
+.home__cases__right__active a {
+    display: inline-block;
+    padding: 18px 24px;
+    border: 1px solid #262626;
+    background-color: #1C1C1C;
+    border-radius: 82px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.home__cases__left__group--sub {
+    background-image: url("../images/cases/case-image-right-bottom.svg");
+    background-repeat: no-repeat;
+    background-position:  right top;
+    background-size: auto;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .home__cases {
+        margin: 60px auto 0 auto;
+    }
+
+    .home__cases__heading h2 {
+        font-size: 38px;
+    }
+
+    .home__cases__heading p {
+        font-size: 16px;
+        margin-bottom: 60px;
+    }
+
+    .home__cases__container {
+        gap: 60px;
+    }
+
+    .home__cases__left__item--title {
+        font-size: 16px;
+    }
+
+    .home__cases__right__heading h3 {
+        font-size: 26px;
+    }
+
+    .home__cases__right__heading p {
+        font-size: 14px;
+    }
+
+    .home__cases__right__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .home__cases__right__body__items--title {
+        font-size: 40px;
+    }
+
+    .home__cases__right__body__items--detail {
+        font-size: 14px;
+    }
+
+    .home__cases__left__group,
+    .home__cases__left__group--sub {
+        padding: 30px;
+    }
+
+    .home__cases__left__item {
+        padding: 20px 10px;
+        height: auto;
+    }
+
+    .home__cases__left__item--icon {
+        padding: 20px 0;
+    }
+
+    .home__cases__right__active a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .home__cases {
+        margin: 60px auto 0 auto;
+    }
+
+    .home__cases__heading {
+        text-align: center;
+    }
+
+    .home__cases__heading h2 {
+        font-size: 28px;
+    }
+
+    .home__cases__heading p {
+        font-size: 14px;
+        margin-bottom: 60px;
+    }
+
+    .home__cases__container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .home__cases__container:last-child {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .home__cases__left__item--title {
+        font-size: 14px;
+    }
+
+    .home__cases__left
+    , .home__cases__right {
+        width: 100%;
+    }
+
+    .home__cases__right__heading {
+        text-align: center;
+    }
+
+    .home__cases__right__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .home__cases__right__body__items {
+        text-align: center;
+        width: 100%;
+    }
+
+    .home__cases__right__body__items--title {
+        font-size: 40px;
+    }
+
+    .home__cases__right__body__items--detail {
+        font-size: 14px;
+    }
+
+    .home__cases_right__group {
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .home__cases__right__body__items--line {
+        background-image: url("../images/cases/case-line.svg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 258px;
+        height: 1px;
+    }
+
+    .home__cases__right__active {
+        text-align: center;
+    }
+
+    .home__cases__right__active a {
+        font-size: 14px;
+    }
+}

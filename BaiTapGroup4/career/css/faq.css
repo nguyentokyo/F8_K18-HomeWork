@@ -1,0 +1,189 @@
+.faq {
+    margin-top: 9.375rem;
+}
+
+.faq__content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.faq__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-right: 18.75rem;
+}
+
+.faq__card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faq__card__content__top, .faq__card__content__bottom {
+    display: flex;
+    gap: 30px;
+}
+
+.faq__card__content__top__left, .faq__card__content__top__right, .faq__card__content__bottom__left, .faq__card__content__bottom__right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 14px;
+    border: 1px solid #262626;
+    padding: 3.125rem;
+}
+
+.faq__card__content__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border: 1px solid #262626;
+}
+
+.faq__card__content__bottom {
+    position: relative;
+}
+
+.faq__card__content__bottom::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, #191919 100%);
+}
+
+.faq__card__content__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 193px;
+    border-radius: 100px;
+    border: 1px solid #262626;
+    background-color: #1C1C1C;
+    padding: 1.125rem 1.5rem;
+}
+
+.faq__card__content__button span {
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-family: Inter, serif;
+    color: #fff;
+}
+
+.faq__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+    .faq {
+        margin-top: 7.5rem;
+    }
+
+    .faq__text {
+        gap: 10px;
+        padding-right: 7.5rem;
+    }
+
+    .faq__card__content {
+        gap: 20px;
+    }
+
+    .faq__content {
+        gap: 60px;
+    }
+
+    .faq__card__content__top, .faq__card__content__bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .faq__card__content__top__left, .faq__card__content__top__right, .faq__card__content__bottom__left, .faq__card__content__bottom__right {
+        max-width: 100%;
+        padding: 2.5rem;
+        gap: 24px;
+    }
+
+    .faq__card__content__title {
+        font-size: 1.125rem;
+    }
+
+    .faq__card__content__bottom::before {
+        background: linear-gradient(180deg, rgba(25, 25, 25, 0) 50%, #191919 100%)
+    }
+
+    .faq__card__content__button {
+        gap: 4px;
+        padding: 0.875rem 1.25rem;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .faq {
+        margin-top: 5rem;
+    }
+
+    .faq__content {
+        gap: 50px;
+    }
+
+    .faq__text {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .faq__title {
+        font-size: 1.75rem;
+    }
+
+    .faq__desc {
+        font-size: 0.875rem;
+    }
+
+    .faq__card__content__top, .faq__card__content__bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .faq__card__content__top__left, .faq__card__content__top__right, .faq__card__content__bottom__left, .faq__card__content__bottom__right {
+        width: 100%;
+        padding: 1.875rem;
+        gap: 20px;
+    }
+
+    .faq__card__content__title {
+        font-size: 1.125rem;
+    }
+
+    .faq__card__content {
+        gap: 20px;
+    }
+
+    .faq__card__content__bottom::before {
+        background: linear-gradient(180deg, rgba(25, 25, 25, 0) 50%, #191919 100%)
+    }
+
+    .faq__card__content__button {
+        gap: 4px;
+        padding: 0.875rem 1.25rem;
+    }
+
+    .faq__card__content__button img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .faq__card__content__button span {
+        font-size: 0.875rem;
+    }
+}

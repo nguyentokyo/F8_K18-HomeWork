@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+<header class="header">
+
+    <div class="header-logo">
+        <img src="image/Logo.svg" alt="logo">
+    </div>
+
+    <input type="checkbox" id="nav-mobile-input" class="nav-input">
+
+    <label for="nav-mobile-input" class="nav-mobile-btn">
+        <img src="icon/Vector%20(Stroke).svg" alt="menu" class="responsive-vector">
+    </label>
+
+    <div class="header-nav">
+        <label for="nav-mobile-input" class="nav-overlay"></label>
+
+        <div class="nav-content">
+            <label for="nav-mobile-input" class="nav-close-btn">
+                &#10005;
+            </label>
+
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../career/index.html">Careers</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="../security/index.html">Security</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header-button">
+        <a class="sign-up" href="../login/index.html">Sign Up</a>
+        <a class="login" href="../login/index.html">Login</a>
+    </div>
+</header>
+
+<main class="main-wrapper">
+    <section class="sign-up-section">
+        <div class="container">
+            <article class="sign-up-card">
+                <header class="sign-up-header">
+                    <h1>Sign Up</h1>
+                    <p>Join our community today! Create an account to unlock exclusive features and personalized experiences.</p>
+                </header>
+
+                <form class="sign-up-form">
+                    <div class="input-row">
+                        <div class="input-flex">
+                            <div class="field">
+                                <input type="text" placeholder="Enter your First Name">
+                            </div>
+                            <div class="field password-field">
+                                <input type="text" placeholder="Enter your Last Name">
+                            </div>
+                        </div>
+
+                        <div class="input-flex">
+                            <div class="field password-field">
+                                <input type="email" placeholder="Enter your Email">
+                            </div>
+                            <div class="field password-field">
+                                <input type="password" placeholder="Enter your Password">
+                                <img src="icon/eye.svg" alt="eye" class="eye">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                        <button type="button" class="btn btn-secondary">Login</button>
+                    </div>
+                </form>
+
+                <div class="divider"><span>Or Continue with</span></div>
+
+                <div class="social-group">
+                    <button class="social-item"><img src="icon/gg-big.svg" alt="G" class="social-icon"></button>
+                    <button class="social-item"><img src="icon/fb-big.svg" alt="F" class="social-icon"></button>
+                    <button class="social-item"><img src="icon/apple-big.svg" alt="A" class="social-icon"></button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header-flex">
+                <div class="title-area">
+                    <h2>Our <span class="highlight">Testimonials</span></h2>
+                    <p>Discover how YourBank has transformed lives with innovative digital solutions and personalized customer service. See why our clients trust us for a secure and prosperous financial journey</p>
+                </div>
+                <div class="toggle-box">
+                    <button class="t-btn active">For Individuals</button>
+                    <button class="t-btn">For Businesses</button>
+                </div>
+            </div>
+
+            <div class="testimonials-container">
+                <button class="arrow-btn"><img src="icon/Vector-left.svg" alt="left" class="arrow-btn-left"></button>
+
+                <div class="testimonials-list">
+                    <article class="t-card">
+                        <div class="quote-wrapper">
+                            <img src="icon/Text.svg" alt="text">
+                        </div>
+                        <div class="testimonial-body">
+                            <p>YourBank has been my trusted financial partner for years. Their personalized service and innovative digital banking solutions have made managing my finances a breeze.</p>
+                            <h4 class="author">Sara T</h4>
+                        </div>
+                    </article>
+
+                    <article class="t-card">
+                        <div class="quote-wrapper">
+                            <img src="icon/Text.svg" alt="text">
+                        </div>
+                        <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
+                        <h4 class="author">John D</h4>
+                    </article>
+
+                    <article class="t-card">
+                        <div class="quote-wrapper">
+                            <img src="icon/Text.svg" alt="text">
+                        </div>
+                        <div class="testimonial-body">
+                            <p>I love the convenience of YourBank’s banking app. It allows me to stay on top of my finances and make transactions on the go. The app is user-friendly and secure, giving me peace of mind.</p>
+                            <h4 class="author">Emily G</h4>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="arrow-btn"><img src="icon/Vector-right.svg" alt="right"></button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="image/Logo.svg" alt="Logo">
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../home/index.html">Home</a></li>
+                    <li><a href="../career/index.html">Careers</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="../security/index.html">Security</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-contact">
+            <div class="contact-item">
+                <img src="icon/email.svg" alt="email" class="contact-icon-img">
+                <span>hello@skillbridge.com</span>
+            </div>
+
+            <div class="contact-item">
+                <img src="icon/phone.svg" alt="phone" class="contact-icon-img">
+                <span>+91 91813 23 2309</span>
+            </div>
+
+            <div class="contact-item">
+                <img src="icon/locate.svg" alt="location" class="contact-icon-img">
+                <span>Somewhere in the World</span>
+            </div>
+        </div>
+
+        <div class="footer-bottom-wrapper">
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" class="social-link">
+                        <img src="icon/fb%20(1).svg" alt="facebook" class="social-icon-img">
+                    </a>
+
+                    <a href="#" class="social-link">
+                        <img src="icon/tw%20(1).svg" alt="twitter" class="social-icon-img">
+                    </a>
+
+                    <a href="#" class="social-link">
+                        <img src="icon/in%20(1).svg" alt="linkedin" class="social-icon-img">
+                    </a>
+                </div>
+
+                <p class="copyright-text">YourBank All Rights Reserved</p>
+
+                <div class="footer-policy">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
