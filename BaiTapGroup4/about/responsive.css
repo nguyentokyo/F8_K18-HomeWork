@@ -235,6 +235,12 @@
         text-align: center;
         background: #1A1A1A;
     }
+
+    .navbar__list li:nth-child(5)
+    , .navbar__list li:nth-child(6) {
+        display: block;
+    }
+
     .menu-icon {
         display: flex;
         justify-content: flex-end;

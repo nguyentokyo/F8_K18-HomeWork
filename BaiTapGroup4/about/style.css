@@ -76,6 +76,11 @@ li{
     border-radius: 82px;
 }
 
+.navbar__list li:nth-child(5)
+, .navbar__list li:nth-child(6) {
+    display: none;
+}
+
 /* hero */
 .hero__content{
     min-height: 816px;
