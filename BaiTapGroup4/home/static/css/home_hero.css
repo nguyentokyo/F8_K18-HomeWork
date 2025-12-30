@@ -455,11 +455,12 @@ h4 {
     }
 
     .home__hero__main {
-        padding: 0 26px;
+        /*padding: 0 26px;*/
     }
 
     .home__hero__group {
         width: 100%;
+        padding: 35px 15px 15px 15px;
     }
 
     .home__hero__monthly__detail span:nth-child(1) {
@@ -477,6 +478,12 @@ h4 {
     .home__hero__national__nav
     , .home__hero__national__money {
         font-size: 14px;
+    }
+
+    .home__hero__monthly {
+        top: -35px;
+        left: -30px;
+        padding: 10px;
     }
 }
 
