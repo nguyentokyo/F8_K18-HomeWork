@@ -34,6 +34,11 @@
     gap: 1.625rem;
 }
 
+.home__header__active__mobile--signup
+, .home__header__active__mobile--login {
+    display: none;
+}
+
 .home__header__nav ul li:hover {
     background: #262626;
     border-radius: 82px;
@@ -168,7 +173,7 @@
 
     #toggle-menu:checked ~ header .home__header__bar nav ul {
         position: fixed;
-        width: 70%;
+        width: 80%;
         top: 100px;
         right: 0;
         margin-right: 0;
@@ -195,5 +200,9 @@
         border-radius: unset;
     }
 
+    #toggle-menu:checked ~ header .home__header__bar nav ul .home__header__active__mobile--signup
+    , #toggle-menu:checked ~ header .home__header__bar nav ul .home__header__active__mobile--login {
+        display: block;
+    }
 }
 

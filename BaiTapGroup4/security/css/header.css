@@ -102,6 +102,11 @@
     padding-right: calc(100%- 150px);
 }
 
+.header__active__mobile--signup
+, .header__active__mobile--login {
+    display: none;
+}
+
 @media screen and (max-width: 1630px)   {
     .header {
         max-width: 97%;
@@ -269,5 +274,10 @@
 
     .nav-input:checked ~ .nav-mobile-btn {
         opacity: 0;
+    }
+
+    .nav-input:checked ~ .header-nav .header__active__mobile--signup
+    , .nav-input:checked ~ .header-nav .header__active__mobile--login {
+        display: block;
     }
 }
