@@ -89,10 +89,14 @@ console.log("Hello" - y);
 console.log('------------TASK 3---------------')
 // INPUT
 const studentLists = [
+    // index 0
     { id : 1, name: "An", age: 9, isVip: false, mathScore: 10 },
+    // index 1
     { id : 2, name: "Hoa", age: 9, isVip: true, mathScore: 10 },
-    { id : 3, name: "Hai", age: 10, isVip: false, mathScore: 8},
-    { id : 4, name: "Nam", age: 6, isVip: true, mathScore: 7}
+    // index 2
+    { id : 3, name: "Hai", age: 10, isVip: false, mathScore: 8 },
+    // index 3
+    { id : 4, name: "Nam", age: 6, isVip: true, mathScore: 7 }
 ];
 
 // OUTPUT
