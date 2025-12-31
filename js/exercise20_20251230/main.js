@@ -85,60 +85,41 @@ console.log("Hello" - y);
 
 // Task 3
 // Write a code snippet to check if a student is eligible to join the Programming Club.
-const students = [
-    {
-        id : 1,
-        name: "An",
-        age: 9,
-        isVip: false,
-        mathScore: 10
-    }
-    ,
-    {
-        id : 2,
-        name: "Hoa",
-        age: 9,
-        isVip: true,
-        mathScore: 10
-    }
-    ,
-    {
-        id : 3,
-        name: "Hai",
-        age: 10,
-        isVip: false,
-        mathScore: 8
-    }
-    ,
-    {
-        id : 4,
-        name: "Nam",
-        age: 6,
-        isVip: true,
-        mathScore: 7
-    }
-];
 
 console.log('------------TASK 3---------------')
+// INPUT
+const studentLists = [
+    { id : 1, name: "An", age: 9, isVip: false, mathScore: 10 },
+    { id : 2, name: "Hoa", age: 9, isVip: true, mathScore: 10 },
+    { id : 3, name: "Hai", age: 10, isVip: false, mathScore: 8},
+    { id : 4, name: "Nam", age: 6, isVip: true, mathScore: 7}
+];
 
-let canEnter = students[0].isVip === true || (students[0].age >= 10 && students[0].mathScore > 7)
-console.log('Input 　: ',students[0])
-console.log('Output　:' ,  canEnter)
+// OUTPUT
+const studentNo1 = studentLists[0].isVip || (studentLists[0].age >= 10 && studentLists[0].mathScore > 7);
+const studentNo2 = studentLists[1].isVip || (studentLists[1].age >= 10 && studentLists[1].mathScore > 7);
+const studentNo3 = studentLists[2].isVip || (studentLists[2].age >= 10 && studentLists[2].mathScore > 7);
+const studentNo4 = studentLists[3].isVip || (studentLists[3].age >= 10 && studentLists[3].mathScore > 7);
+
+const canEnterLists = [
+    studentNo1, studentNo2, studentNo3, studentNo4
+]
+
+console.log('Input 　:', studentLists[0])
+console.log('Output　:', canEnterLists[0])
 console.log('-------------')
 
-canEnter = students[1].isVip === true || (students[1].age >= 10 && students[1].mathScore > 7)
-console.log('Input 　: ',students[1])
-console.log('Output　:' ,  canEnter)
-console.log('--------')
+console.log('Input 　:', studentLists[1])
+console.log('Output　:', canEnterLists[1])
+console.log('-------------')
 
-canEnter = students[2].isVip === true || (students[2].age >= 10 && students[2].mathScore > 7)
-console.log('Input 　: ',students[2])
-console.log('Output　:' ,  canEnter)
-console.log('--------')
+console.log('Input 　:', studentLists[2])
+console.log('Output　:', canEnterLists[2])
+console.log('-------------')
 
-canEnter = students[3].isVip === true || (students[3].age >= 10 && students[3].mathScore > 7)
-console.log('Input 　: ',students[3])
-console.log('Output　:' ,  canEnter)
+console.log('Input 　:', studentLists[3])
+console.log('Output　:', canEnterLists[3])
+console.log('-------------')
 
 
 
