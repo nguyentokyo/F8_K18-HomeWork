@@ -87,6 +87,7 @@ console.log("Hello" - y);
 // Write a code snippet to check if a student is eligible to join the Programming Club.
 const students = [
     {
+        id : 1,
         name: "An",
         age: 9,
         isVip: false,
@@ -94,6 +95,7 @@ const students = [
     }
     ,
     {
+        id : 2,
         name: "Hoa",
         age: 9,
         isVip: true,
@@ -101,6 +103,7 @@ const students = [
     }
     ,
     {
+        id : 3,
         name: "Hai",
         age: 10,
         isVip: false,
@@ -108,6 +111,7 @@ const students = [
     }
     ,
     {
+        id : 4,
         name: "Nam",
         age: 6,
         isVip: true,
@@ -118,16 +122,24 @@ const students = [
 console.log('------------TASK 3---------------')
 
 let canEnter = students[0].isVip === true || (students[0].age >= 10 && students[0].mathScore > 7)
-console.log(students[0] , '　⇒　Check Out：' ,  canEnter)
+console.log('Input 　: ',students[0])
+console.log('Output　:' ,  canEnter)
+console.log('-------------')
 
 canEnter = students[1].isVip === true || (students[1].age >= 10 && students[1].mathScore > 7)
-console.log(students[1] , '　⇒　Check Out：' ,  canEnter)
+console.log('Input 　: ',students[1])
+console.log('Output　:' ,  canEnter)
+console.log('--------')
 
 canEnter = students[2].isVip === true || (students[2].age >= 10 && students[2].mathScore > 7)
-console.log(students[2] , '　⇒　Check Out：' ,  canEnter)
+console.log('Input 　: ',students[2])
+console.log('Output　:' ,  canEnter)
+console.log('--------')
 
 canEnter = students[3].isVip === true || (students[3].age >= 10 && students[3].mathScore > 7)
-console.log(students[3] , '　⇒　Check Out：' ,  canEnter)
+console.log('Input 　: ',students[3])
+console.log('Output　:' ,  canEnter)
+
 
 
 // Logic Question: Is !(age < 10) mathematically the same as age >= 10?
