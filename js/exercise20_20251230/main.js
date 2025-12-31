@@ -109,7 +109,10 @@ const studentNo3 = studentLists[2].isVip || (studentLists[2].age >= ageMin && st
 const studentNo4 = studentLists[3].isVip || (studentLists[3].age >= ageMin && studentLists[3].mathScore > mathScoreMin);
 
 const canEnterLists = [
-    studentNo1, studentNo2, studentNo3, studentNo4
+    studentNo1
+    ,studentNo2
+    ,studentNo3
+    ,studentNo4
 ]
 
 console.log('Input 　:', studentLists[0])
