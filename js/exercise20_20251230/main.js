@@ -88,6 +88,9 @@ console.log("Hello" - y);
 
 console.log('------------TASK 3---------------')
 // INPUT
+const ageMin = 10;
+const mathScoreMin = 7;
+
 const studentLists = [
     // index 0
     { id : 1, name: "An", age: 9, isVip: false, mathScore: 10 },
@@ -99,20 +102,12 @@ const studentLists = [
     { id : 4, name: "Nam", age: 6, isVip: true, mathScore: 7 }
 ];
 
-const ageMin = 10;
-const mathScoreMin = 7;
-
 // OUTPUT
-const studentNo1 = studentLists[0].isVip || (studentLists[0].age >= ageMin && studentLists[0].mathScore > mathScoreMin);
-const studentNo2 = studentLists[1].isVip || (studentLists[1].age >= ageMin && studentLists[1].mathScore > mathScoreMin);
-const studentNo3 = studentLists[2].isVip || (studentLists[2].age >= ageMin && studentLists[2].mathScore > mathScoreMin);
-const studentNo4 = studentLists[3].isVip || (studentLists[3].age >= ageMin && studentLists[3].mathScore > mathScoreMin);
-
 const canEnterLists = [
-    studentNo1
-    ,studentNo2
-    ,studentNo3
-    ,studentNo4
+    studentLists[0].isVip || (studentLists[0].age >= ageMin && studentLists[0].mathScore > mathScoreMin)
+    ,studentLists[1].isVip || (studentLists[1].age >= ageMin && studentLists[1].mathScore > mathScoreMin)
+    ,studentLists[2].isVip || (studentLists[2].age >= ageMin && studentLists[2].mathScore > mathScoreMin)
+    ,studentLists[3].isVip || (studentLists[3].age >= ageMin && studentLists[3].mathScore > mathScoreMin)
 ]
 
 console.log('Input 　:', studentLists[0])
