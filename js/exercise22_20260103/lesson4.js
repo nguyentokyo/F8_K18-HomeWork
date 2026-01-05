@@ -9,7 +9,7 @@
 const baseTicketPrice = 100;
 const discount = 0.5;
 
-const ticketPrice = (age) => {
+const getTicketPrice = (age) => {
     if (typeof age !== 'number') {
         return 'Not a age'
     }
@@ -21,7 +21,7 @@ const ticketPrice = (age) => {
     }
 }
 
-console.log(ticketPrice("20"));     //Not a age ⇒ OK
-console.log(ticketPrice(-12));     //Age must be positive ⇒ OK
-console.log(ticketPrice(10));     //50k ⇒ OK
-console.log(ticketPrice(20));     //100k ⇒ OK
+console.log(getTicketPrice("20"));     //Not a age ⇒ OK
+console.log(getTicketPrice(-12));     //Age must be positive ⇒ OK
+console.log(getTicketPrice(10));     //50k ⇒ OK
+console.log(getTicketPrice(20));     //100k ⇒ OK

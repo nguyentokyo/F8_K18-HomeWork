@@ -19,7 +19,7 @@ const maxPayTier1 = 50 * tier1;
 const maxPayTier2 = 50 * tier2;
 const maxPayTier3 = 100 * tier3;
 
-const calculateElectricityBill = (kWh) => {
+const getElectricityBill = (kWh) => {
     if (typeof kWh !== 'number' || kWh < 0) {
         return 'Invalid kWh';
     }
@@ -48,11 +48,11 @@ const calculateElectricityBill = (kWh) => {
     return `Tier used: ${tierUsed}, Total amount: ${pay} VND`;
 }
 
-console.log(calculateElectricityBill("100"))        //Invalid kWh ⇒ ok
-console.log(calculateElectricityBill(-10))          //Invalid kWh ⇒ ok
-console.log(calculateElectricityBill(0))            //No electricity bill
-console.log(calculateElectricityBill(45))           //Tier used: 1, Total amount: 75510 VND
-console.log(calculateElectricityBill(90))           //Tier used: 2, Total amount: 153260 VND
-console.log(calculateElectricityBill(150))          //Tier used: 3, Total amount: 271300 VND
-console.log(calculateElectricityBill(300))          //Tier used: 4, Total amount: 625600 VND
+console.log(getElectricityBill("10z"))        //Invalid kWh ⇒ ok
+console.log(getElectricityBill(-10))          //Invalid kWh ⇒ ok
+console.log(getElectricityBill(0))            //No electricity bill
+console.log(getElectricityBill(45))           //Tier used: 1, Total amount: 75510 VND
+console.log(getElectricityBill(90))           //Tier used: 2, Total amount: 153260 VND
+console.log(getElectricityBill(150))          //Tier used: 3, Total amount: 271300 VND
+console.log(getElectricityBill(300))          //Tier used: 4, Total amount: 625600 VND
 
