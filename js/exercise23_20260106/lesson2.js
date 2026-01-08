@@ -1,12 +1,13 @@
 
 
 function isPerfectSquare(x) {
-    if (typeof x !== 'number') {
+    if (typeof x !== 'number' || isNaN(x)) {
         return false
     } else {
         return (x ** 0.5) % 1 === 0;
     }
 }
+console.log(isPerfectSquare(NaN));  //NaN ⇒ false
 console.log(isPerfectSquare("1"));  //string ⇒ false
 console.log(isPerfectSquare(-1));   //false
 console.log(isPerfectSquare(2));    //false
