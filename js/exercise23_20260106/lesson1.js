@@ -1,5 +1,5 @@
 
-const isTriangle = (a, b, c) => {
+const getTriangle = (a, b, c) => {
     const isTriangle = (a + b > c) && (b + c > a) && (c + a > b);
     const isEquilateral = (a === b && b === c);
     const isIsosceles = (a === b || b === c || a === c);
@@ -20,12 +20,12 @@ const isTriangle = (a, b, c) => {
     }
 }
 
-console.log(isTriangle(NaN, 4, 2)); // Invalid input OK
-console.log(isTriangle("1", "4", 2)); // Invalid input OK
-console.log(isTriangle(1, 4, 2)); // Not a triangle OK
-console.log(isTriangle(3, 4, 5)); // Right triangle OK
-console.log(isTriangle(5, 5, 5)); // Equilateral triangle OK
-console.log(isTriangle(5, 4, 2)); // Scalene triangle OK
+console.log(getTriangle(NaN, 4, 2)); // Invalid input OK
+console.log(getTriangle("1", "4", 2)); // Invalid input OK
+console.log(getTriangle(1, 4, 2)); // Not a triangle OK
+console.log(getTriangle(3, 4, 5)); // Right triangle OK
+console.log(getTriangle(5, 5, 5)); // Equilateral triangle OK
+console.log(getTriangle(5, 4, 2)); // Scalene triangle OK
 
 
 
