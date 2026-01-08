@@ -7,6 +7,7 @@ function isPerfectSquare(x) {
         return (x ** 0.5) % 1 === 0;
     }
 }
+
 console.log(isPerfectSquare(NaN));  //NaN ⇒ false
 console.log(isPerfectSquare("1"));  //string ⇒ false
 console.log(isPerfectSquare(-1));   //false
