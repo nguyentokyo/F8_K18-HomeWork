@@ -4,6 +4,7 @@ function isPrime(n) {
         return "Invalid input";
     }
 
+    
     let result = true;
 
     if (n < 2) {
