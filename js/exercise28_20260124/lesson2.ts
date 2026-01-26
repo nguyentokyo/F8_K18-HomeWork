@@ -24,9 +24,9 @@ interface Employee {
 
 // 2. Create a class for a full-time employee.
 class FullTimeEmployee implements Employee {
-    id: number = 0;
-    name: string = "";
-    salary: number = 0;
+    id!: number;
+    name!: string;
+    salary!: number;
 
     getSalary(): number {
         return this.salary
@@ -35,10 +35,10 @@ class FullTimeEmployee implements Employee {
 
 // 3. Create a class for a part-time employee.
 class PartTimeEmployee implements Employee {
-    id: number = 0;
-    name: string = "";
-    salary: number = 0;
-    hoursWorked: number = 0;
+    id!: number;
+    name!: string;
+    salary!: number;
+    hoursWorked!: number;
 
     getSalary(): number {
         return this.salary * this.hoursWorked
