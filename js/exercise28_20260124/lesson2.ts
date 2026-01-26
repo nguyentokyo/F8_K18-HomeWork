@@ -11,7 +11,7 @@
 //      Print the total salary
 //    Case2
 //      Two full-time employee.
-//      Three part-time employee.
+//      Two part-time employee.
 //      Print the total salary
 
 // 1. Create an interface for an employee.
@@ -94,7 +94,7 @@ console.log("--------Case2 Start---");
 // 5. Create a usage example.
 //    Case2
 //      Two full-time employee.
-//      Three part-time employee.
+//      Two part-time employee.
 //      Print the total salary
 
 const fullTimeEmployees: Employee[] = [];
