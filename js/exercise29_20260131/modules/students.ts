@@ -1,4 +1,4 @@
-import { ClassRoom } from "./modules/classRooms";
+import { ClassRoom } from "./classRooms";
 
 export interface StudentI {
     getId(): number;
@@ -7,7 +7,7 @@ export interface StudentI {
     updateMessage(message: string): void;
 }
 
-class Student implements StudentI {
+export class Student implements StudentI {
     protected id: number;
     protected name: string;
 
@@ -78,15 +78,3 @@ class Student implements StudentI {
 //         this.notify(message)
 //     }
 // }
-
-const jsClass = new ClassRoom("Lớp JS Cơ Bản");
-// console.log(jsClass);
-const st1 = new Student(1, "An");
-const st2 = new Student(2, "Bình");
-const st3 = new Student(3, "Chi");
-
-jsClass.addStudent(st1)
-jsClass.addStudent(st2)
-jsClass.addStudent(st3)
-// console.log(jsClass.getStudents());
-jsClass.postAnnouncement("Mai kiểm tra OOP!");

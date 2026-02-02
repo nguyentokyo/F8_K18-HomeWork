@@ -1,4 +1,4 @@
-import { StudentI  } from '../students'
+import { StudentI  } from './students'
 
 interface ClassRoomI {
     addStudent(student: StudentI): void;
@@ -26,7 +26,7 @@ export class ClassRoom implements ClassRoomI {
 
     removeStudent(studentID: number): void {
         const currentStudents = this.getStudents();
-
+        // @ts-ignore
         const index = currentStudents.findIndex(student => student.getId() === studentID);
         if (index === -1) {
             throw new Error("Student not found");
