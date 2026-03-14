@@ -1,12 +1,16 @@
+
 // ─── Khai báo Zod ─────────────────────────────────────────────
 const { z } = window.Zod;
 
-// TODO 1: Định nghĩa Schema
-// Tách baseSchema để dùng cho validate từng field (pick)
+// TODO 1: Định nghĩa registerSchema
+// const registerSchema = z.object({ ... });
 const baseSchema = z.object({
     firstName: z.string().trim().min(2, "First name phải >= 2 ký tự"),
+
     lastName: z.string().trim().min(2, "Last name phải >= 2 ký tự"),
+
     email: z.string().trim().email("Email không đúng định dạng"),
+
     phone: z
         .string()
         .trim()
@@ -15,167 +19,219 @@ const baseSchema = z.object({
             (val) => !val || /^0\d{9}$/.test(val),
             "Phone phải có dạng 0XXXXXXXXX"
         ),
+
     role: z.enum(["dev", "design", "pm", "other"], {
-        errorMap: () => ({ message: "Vui lòng chọn Role" })
+        errorMap: () => ({ message: "Role không hợp lệ" })
     }),
+
     password: z
         .string()
         .min(8, "Password phải >= 8 ký tự")
-        .regex(/[A-Za-z]/, "Phải có ít nhất 1 chữ cái")
-        .regex(/\d/, "Phải có ít nhất 1 chữ số"),
-    confirmPassword: z.string().min(1, "Vui lòng xác nhận mật khẩu"),
+        .regex(/[A-Za-z]/, "Password phải có ít nhất 1 chữ cái")
+        .regex(/\d/, "Password phải có ít nhất 1 chữ số"),
+
+    confirmPassword: z.string(),
+
     terms: z.literal(true, {
         errorMap: () => ({ message: "Bạn phải đồng ý điều khoản" })
     })
 });
 
-// registerSchema dùng cho lúc Submit (có kiểm tra khớp password)
 const registerSchema = baseSchema.superRefine((data, ctx) => {
     if (data.password !== data.confirmPassword) {
         ctx.addIssue({
             code: "custom",
-            message: "Mật khẩu xác nhận không khớp",
+            message: "Password và Confirm Password không khớp",
             path: ["confirmPassword"]
         });
     }
 });
 
-// TODO 2: Hàm UI Helpers
-function showError(fieldId, message) {
+// TODO 2: Hàm showError / showSuccess / clearField
+// function showError(fieldId, errorMsgId, message) { ... }
+function showError(fieldId, errorMsgId, message) {
     const field = document.getElementById(fieldId);
-    const errorMsg = document.getElementById(fieldId + "Error");
+    const errorMsg = document.getElementById(errorMsgId);
 
+    // thêm class lỗi
     field.classList.add("is-error");
     field.classList.remove("is-success");
-    if (errorMsg) {
-        errorMsg.textContent = message;
-        errorMsg.classList.add("show");
-    }
-}
 
+    // hiển thị message
+    errorMsg.textContent = message;
+    errorMsg.classList.add("show");
+}
+// function showSuccess(fieldId, errorMsgId) { ... }
 function showSuccess(fieldId) {
     const field = document.getElementById(fieldId);
-    const errorMsg = document.getElementById(fieldId + "Error");
+    const errorMsg = field.nextElementSibling;
 
+    // thêm class success
     field.classList.add("is-success");
     field.classList.remove("is-error");
+
+    // ẩn lỗi
     if (errorMsg) {
         errorMsg.textContent = "";
         errorMsg.classList.remove("show");
     }
 }
 
-// Hàm lấy toàn bộ dữ liệu từ Form
-function getFormData() {
-    return {
-        firstName: document.getElementById("firstName").value,
-        lastName: document.getElementById("lastName").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        role: document.getElementById("role").value,
-        password: document.getElementById("password").value,
-        confirmPassword: document.getElementById("confirmPassword").value,
-        terms: document.getElementById("terms").checked
-    };
-}
+// TODO 3: Xử lý submit
+// document.getElementById('registerForm').addEventListener('submit', (e) => { ... });
+document
+    .getElementById("registerForm")
+    .addEventListener("submit", (e) => {
 
-// TODO 3: Xử lý Submit
-document.getElementById("registerForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const data = getFormData();
-    const result = registerSchema.safeParse(data);
+        e.preventDefault();
 
-    // Reset toàn bộ trạng thái trước khi check
-    const allFields = Object.keys(data);
-    allFields.forEach(field => showSuccess(field));
+        const data = {
+            firstName: document.getElementById("firstName").value,
+            lastName: document.getElementById("lastName").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            role: document.getElementById("role").value,
+            password: document.getElementById("password").value,
+            confirmPassword: document.getElementById("confirmPassword").value,
+            terms: document.getElementById("terms").checked
+        };
 
-    if (!result.success) {
-        const errors = result.error.flatten().fieldErrors;
-        Object.keys(errors).forEach((field) => {
-            showError(field, errors[field][0]);
-        });
-    } else {
-        console.log("Dữ liệu hợp lệ:", result.data);
-        document.getElementById("registerForm").style.display = "none";
-        document.getElementById("successScreen").classList.add("show");
-    }
-});
-
-// TODO 4: Validation real-time (Blur & Change)
-const fieldsToWatch = ["firstName", "lastName", "email", "phone", "role", "password", "confirmPassword", "terms"];
-
-fieldsToWatch.forEach((fieldId) => {
-    const input = document.getElementById(fieldId);
-    const eventType = input.type === "checkbox" || input.tagName === "SELECT" ? "change" : "blur";
-
-    input.addEventListener(eventType, () => {
-        const data = getFormData();
-
-        // Luôn dùng registerSchema để đảm bảo logic confirmPassword hoạt động
         const result = registerSchema.safeParse(data);
 
         if (!result.success) {
-            const fieldError = result.error.flatten().fieldErrors[fieldId];
-            if (fieldError) {
-                showError(fieldId, fieldError[0]);
-            } else {
-                showSuccess(fieldId);
-            }
+            const errors = result.error.flatten().fieldErrors;
+
+            Object.keys(errors).forEach((field) => {
+                showError(field, field + "Error", errors[field][0]);
+            });
         } else {
-            showSuccess(fieldId);
+            document.getElementById("registerForm").style.display = "none";
+            document.getElementById("successScreen").classList.add("show");
+        }
+    });
+
+// TODO 4: Validation real-time khi blur
+// document.getElementById('email').addEventListener('blur', () => { ... });
+const fields = [
+    "firstName",
+    "lastName",
+    "email",
+    "phone",
+    "role",
+    "password",
+    "confirmPassword"
+];
+
+fields.forEach((field) => {
+    const input = document.getElementById(field);
+
+    input.addEventListener("blur", () => {
+        const value =
+            input.type === "checkbox"
+                ? input.checked
+                : input.value;
+
+        const fieldSchema = baseSchema.pick({ [field]: true });
+        const result = fieldSchema.safeParse({ [field]: value });
+
+        if (!result.success) {
+            const error = result.error.flatten().fieldErrors[field][0];
+            showError(field, field + "Error", error);
+        } else {
+            showSuccess(field);
         }
     });
 });
 
-// TODO 5: Toggle Password Visibility
-function setupToggle(toggleId, inputId) {
-    const toggle = document.getElementById(toggleId);
-    const input = document.getElementById(inputId);
-    toggle.addEventListener("click", () => {
-        const isPassword = input.type === "password";
-        input.type = isPassword ? "text" : "password";
-        toggle.textContent = isPassword ? "🙈" : "👁";
-    });
-}
-setupToggle("togglePassword", "password");
-setupToggle("toggleConfirm", "confirmPassword");
+// TODO 5: Toggle password
+// document.getElementById('togglePassword').addEventListener('click', () => { ... });
+const togglePassword = document.getElementById("togglePassword");
+const passwordInput = document.getElementById("password");
 
-// TODO 6: Password Strength Meter
-document.getElementById("password").addEventListener("input", (e) => {
-    const pwd = e.target.value;
+togglePassword.addEventListener("click", () => {
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        togglePassword.textContent = "🙈";
+    } else {
+        passwordInput.type = "password";
+        togglePassword.textContent = "👁";
+    }
+
+});
+
+const toggleConfirm = document.getElementById("toggleConfirm");
+const confirmInput = document.getElementById("confirmPassword");
+
+toggleConfirm.addEventListener("click", () => {
+
+    if (confirmInput.type === "password") {
+        confirmInput.type = "text";
+        toggleConfirm.textContent = "🙈";
+    } else {
+        confirmInput.type = "password";
+        toggleConfirm.textContent = "👁";
+    }
+
+});
+
+// TODO 6: Thanh độ mạnh mật khẩu
+// document.getElementById('password').addEventListener('input', () => { ... });
+const strengthBars = document.getElementById("strengthBars");
+const strengthLabel = document.getElementById("strengthLabel");
+
+passwordInput.addEventListener("input", () => {
+
+    const password = passwordInput.value;
     let score = 0;
-    if (pwd.length >= 8) score++;
-    if (/[A-Z]/.test(pwd)) score++;
-    if (/[0-9]/.test(pwd)) score++;
-    if (/[^A-Za-z0-9]/.test(pwd)) score++;
 
-    if (pwd === "") score = 0;
+    // ≥ 8 ký tự
+    if (password.length >= 8) score++;
 
-    const strengthBars = document.getElementById("strengthBars");
-    const strengthLabel = document.getElementById("strengthLabel");
-    const labels = ["", "Yếu", "Trung bình", "Mạnh", "Rất mạnh"];
+    // có chữ hoa
+    if (/[A-Z]/.test(password)) score++;
 
+    // có số
+    if (/[0-9]/.test(password)) score++;
+
+    // có ký tự đặc biệt
+    if (/[^A-Za-z0-9]/.test(password)) score++;
+
+    // cập nhật level
     strengthBars.dataset.level = score;
+
+    // cập nhật label
+    const labels = ["", "Weak", "Medium", "Strong", "Very Strong"];
     strengthLabel.textContent = labels[score];
+
 });
 
 // TODO 7: Nút Reset
-document.getElementById("resetBtn").addEventListener("click", () => {
-    const form = document.getElementById("registerForm");
-    form.reset();
+// document.getElementById('resetBtn').addEventListener('click', () => { ... });
+document
+    .getElementById("resetBtn")
+    .addEventListener("click", () => {
 
-    fieldsToWatch.forEach(field => {
-        const input = document.getElementById(field);
-        input.classList.remove("is-error", "is-success");
-        const err = document.getElementById(field + "Error");
-        if(err) {
+        const form = document.getElementById("registerForm");
+        const successScreen = document.getElementById("successScreen");
+
+        // reset dữ liệu form
+        form.reset();
+
+        // xoá class error / success
+        document.querySelectorAll(".input-field").forEach((input) => {
+            input.classList.remove("is-error", "is-success");
+        });
+
+        // xoá message lỗi
+        document.querySelectorAll(".error-msg").forEach((err) => {
             err.textContent = "";
             err.classList.remove("show");
-        }
-    });
+        });
 
-    document.getElementById("strengthBars").dataset.level = 0;
-    document.getElementById("strengthLabel").textContent = "";
-    document.getElementById("successScreen").classList.remove("show");
-    form.style.display = "block";
-});
+        // ẩn success screen
+        successScreen.classList.remove("show");
+
+        // hiện lại form
+        form.style.display = "block";
+    });
