@@ -11,6 +11,8 @@ window.onload = function () {
     if (savedName) {
         resultName.textContent = "Tên đã lưu: " + savedName;
     }
+
+    renderCart();       // Task3 load
 };
 
 function renderName() {
@@ -69,12 +71,15 @@ const products = [
     { id: 3, name: "Giày" },
     { id: 4, name: "Dép" },
     { id: 5, name: "Mũ" },
+    { id: 6, name: "Balo" },
+    { id: 7, name: "Cặp sách" },
 ];
 
 products.forEach((product) => {
     const div = document.createElement("div");
     const p = document.createElement("p");
     p.textContent = product.name;
+    p.style.width = "200px"
 
     const btn = document.createElement("button");
     btn.textContent = "Thêm";
