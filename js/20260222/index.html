@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM BASIC</title>
+    <style>
+        .task {
+            margin-bottom: 40px;
+        }
+
+        .task__title {
+            font-weight: bold;
+        }
+
+        .task__button {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        .task__input {
+            padding: 5px;
+        }
+
+        .task__list {
+            margin-top: 10px;
+        }
+
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="task task--01">
+        <span class="task__title">Task 01</span>
+        <br><br>
+        <button class="task__button" id="add-paragraph-btn">
+            Add paragraph
+        </button>
+        <div class="task__result" id="paragraph-container"></div>
+    </div>
+    <br><br>
+    <div class="task task--02">
+        <span class="task__title">Task 02</span>
+        <br><br>
+        <button class="task__button" id="add-item-btn">
+            Add item
+        </button>
+        <ul class="task__list" id="item-container"></ul>
+    </div>
+
+    <br><br>
+    <div class="task task--03">
+        <span class="task__title">Task 03</span>
+        <br><br>
+        <label class="task__label" for="task-input">Input</label>
+        <input class="task__input" type="text" id="task-input" placeholder="Enter something">
+        <button class="task__button" id="add-text-btn"> Add item</button>
+        <div class="task__result" id="text-result"></div>
+    </div>
+
+    <br><br>
+    <div class="task task--04">
+        <span class="task__title">Task 04 - 05 - 06 - 07 </span>
+        <br><br>
+        <label class="task__label" for="todo-input">Input</label>
+        <input class="task__input" type="text" id="todo-input" placeholder="Enter something">
+        <button class="task__button" id="add-todo-btn"> Add item</button>
+        <p id="error-message"></p>
+        <ul class="task__list" id="todo-list"></ul>
+    </div>
+    <br><br>
+    <div class="task task--04">
+        <span class="task__title">Task 08</span>
+        <br><br>
+        <label class="task__label" for="todo-input-08">Input</label>
+        <input class="task__input" type="text" id="todo-input-08" placeholder="Enter something">
+        <button class="task__button" id="add-todo-btn-08"> Add item</button>
+        <p id="error-message-08"></p>
+        <ul class="task__list" id="todo-list-08"></ul>
+    </div>
+    <br><br>
+    <div class="task task--09">
+        <h3>Task 09 - Advanced Todo</h3>
+        <label class="task__label" for="todo-input-09">Input</label>
+        <input class="task__input" type="text" id="todo-input-09" placeholder="Enter something">
+        <button class="task__button" id="add-btn-09">Add Todo</button>
+        <label class="task__label" for="search-input-09">Search</label>
+        <input class="task__input" type="text" id="search-input-09" placeholder="Search Todo">
+        <label>
+            <input class="task__input" type="checkbox" id="filter-done-09">Done
+        </label>
+        <ul class="task__list" id="todo-list-09"></ul>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
