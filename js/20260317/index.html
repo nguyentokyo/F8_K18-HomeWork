@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document Lesson 37</title>
+    <style>
+        .task {
+            margin-bottom: 40px;
+        }
+
+        .task__title {
+            font-weight: bold;
+        }
+
+        .task__button {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        .task__input {
+            padding: 5px;
+        }
+
+        #products {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.625rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="task task--01">
+        <span class="task__title">Task 01</span>
+        <br>
+        <label class="task__label" for="inputName">Nhập tên</label>
+        <input class="task__input" type="text" id="inputName" placeholder="Enter something">
+        <br><br>
+        <button class="task__button" id="saveBtn">Save</button>
+        <button class="task__button" id="readBtn">Read</button>
+        <button class="task__button" id="deleteBtn">Delete</button>
+        <p id="resultName"></p>
+    </div>
+    <hr>
+    <div class="task task--02">
+        <span class="task__title">Task 02 </span>
+        <h1 class="task__title" id="visitCount"></h1>
+        <button class="task__button" id="resetBtn">Reset</button>
+    </div>
+
+    <hr>
+
+    <div class="task task--03">
+        <span class="task__title">Task 03</span>
+        <h2>Sản phẩm</h2>
+        <div id="products"></div>
+        <hr>
+        <h2>Giỏ hàng <span id="count">0</span></h2>
+        <button id="clearBtn">Xóa giỏ hàng</button>
+        <ul id="cartList"></ul>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
