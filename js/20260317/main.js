@@ -66,18 +66,26 @@ const productItemEl = document.getElementById("products");
 const clearBtn = document.getElementById("clearBtn");
 
 const products = [
-    { id: 1, name: "Áo" },
-    { id: 2, name: "Quần" },
-    { id: 3, name: "Giày" },
-    { id: 4, name: "Dép" },
-    { id: 5, name: "Mũ" },
-    { id: 6, name: "Balo" },
-    { id: 7, name: "Cặp sách" },
+    { id: 1, name: "Áo" , tien: 40000},
+    { id: 2, name: "Quần" , tien: 50000},
+    { id: 3, name: "Giày" , tien: 100000},
+    { id: 4, name: "Dép" , tien: 40000},
+    { id: 5, name: "Mũ" , tien: 40000},
+    { id: 6, name: "Balo" , tien: 40000},
+    { id: 7, name: "Cặp sách" , tien: 40000},
 ];
 
 products.forEach((product) => {
     const div = document.createElement("div");
     const p = document.createElement("p");
+    const span = document.createElement("span");
+
+    const formatter = new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+    });
+
+    span.innerText = formatter.format(product.tien);
     p.textContent = product.name;
     p.style.width = "200px"
 
@@ -86,6 +94,7 @@ products.forEach((product) => {
     btn.onclick = () => addToCart(product.id);
 
     div.appendChild(p);
+    div.appendChild(span);
     div.appendChild(btn);
 
     productItemEl.appendChild(div);
