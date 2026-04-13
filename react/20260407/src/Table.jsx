@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
 function Table() {
-
     const headers = [
         {
             value: 'id',
