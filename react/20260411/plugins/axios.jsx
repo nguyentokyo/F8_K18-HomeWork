@@ -2,14 +2,11 @@ import axios from "axios";
 
 const baseURL = "https://k305jhbh09.execute-api.ap-southeast-1.amazonaws.com"
 
-
 const api = axios.create({
     baseURL: baseURL,
     timeout: 8000,
     headers: { "Content-Type": "application/json" },
 });
-
-
 
 export async function login(email, password) {
     const response = await createData('auth/signin', {email, password});
@@ -29,7 +26,7 @@ async function refreshToken() {
     }
 
     try {
-        const res = await axios.post(`${baseURL}/auth/refresh-token`, {
+        const res = await createData('/auth/refresh-token', {
             refreshToken: currentRefreshToken,
         });
 

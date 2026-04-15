@@ -12,7 +12,8 @@ function Customer() {
             const password = "12345678";
 
             // create Token
-            await login(email, password);
+            const loginRes = await login(email, password);
+            console.log("Login status:", loginRes);
 
             // getDate
             const res = await getData("customers");
@@ -111,6 +112,12 @@ function Customer() {
 
     // Detele Button
     const onDelete = async (id) => {
+        const isConfirmed = window.confirm("Bạn có chắc chắn xóa khách hàng này không?");
+
+        if (!isConfirmed) {
+            return;
+        }
+
         console.log('delete', id);
         const { error } = await deleteData("customers", id);
         if (error) {
@@ -174,8 +181,25 @@ function Customer() {
             res = await updateData("customers", editingId, form);
 
             console.log('update',res);
+
+            const updatedCustomer = res.data;
+
+            setCustomers(currentList => {
+                const newList = [...currentList];
+
+                const index = newList.findIndex(item => item.id === editingId);
+
+                if (index !== -1) {
+                    newList[index] = updatedCustomer;
+                }
+
+                return newList;
+            });
+
         } else {
             res = await createData("customers", form);
+
+            setCustomers(prev => [...prev, res.data]);
         }
 
         if (res.error) {
@@ -183,8 +207,8 @@ function Customer() {
             return;
         }
 
-        const data = await getData("customers");
-        setCustomers(data.data || []);
+        // const data = await getData("customers");
+        // setCustomers(data.data || []);
 
         setShowModal(false);
     };
