@@ -120,12 +120,14 @@ function App() {
     };
 
     const [isOpenCustomerDialog, setIsOpenDialog] = useState(false)
+    const [title, setTitle] = useState('')
     const [selectingCustomer, setSelectingCustomer] = useState<Customer | undefined>(undefined)
 
     const onClickEdit = (customerId: number) => {
 
         const curS: Customer | undefined = customers.find(s => s.id === customerId)
         setSelectingCustomer(curS)
+        setTitle("Chỉnh sửa khách hàng");
         setIsOpenDialog(true)
     }
 
@@ -160,6 +162,7 @@ function App() {
 
     const openCreate = () => {
         setSelectingCustomer({ ...FormCustomer, id: undefined as any });
+        setTitle("Thêm khách hàng");
         setIsOpenDialog(true);
     };
 
@@ -267,7 +270,7 @@ function App() {
         />
 
         <CustomerDialog
-            title={'Dialog Khách Hàng'}
+            title={title}
             fields={DialogFields}
             isOpen={isOpenCustomerDialog}
             onClose={() => setIsOpenDialog(false)}
