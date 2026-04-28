@@ -1,5 +1,12 @@
 import './App.css'
 import { TextField, Box, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from '@mui/material'
+
+import dayjs, { Dayjs } from 'dayjs';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
 import { TableContainer } from "./components";
 import type {Column} from "./utils";
 import {useState, useMemo} from "react";
@@ -47,7 +54,7 @@ const getRandomOrder = () => {
   }
 }
 
-const tmpOrders = Array.from({ length: 10000 }, (_) => {
+const tmpOrders = Array.from({ length: 20 }, (_) => {
   return getRandomOrder()
 })
 
@@ -69,19 +76,79 @@ function App() {
   //   }, 0)
   // }
 
+    const [dateFrom, setDateFrom] = useState<Dayjs | null>(null)
+
+    const [dateTo, setDateTo] = useState<Dayjs | null>(null)
+
+    const filteredOrders = useMemo(() => {
+
+        return orders.filter(order => {
+
+            const matchSearch =
+                order.customerName
+                    .toLowerCase()
+                    .includes(searchStr.toLowerCase())
+
+                ||
+
+                order.productName
+                    .toLowerCase()
+                    .includes(searchStr.toLowerCase())
+
+            const orderDate = dayjs(order.orderDate)
+
+            const matchDateFrom =
+                !dateFrom ||
+                orderDate.isAfter(dateFrom.subtract(1, 'day'))
+
+            const matchDateTo =
+                !dateTo ||
+                orderDate.isBefore(dateTo.add(1, 'day'))
+
+            return (
+                matchSearch &&
+                matchDateFrom &&
+                matchDateTo
+            )
+
+        })
+
+    }, [orders, searchStr, dateFrom, dateTo])
+
+
   const totalAmount = useMemo(
     () => {
       console.log('redetf')
-      return orders.reduce((a, b) => {
+      return filteredOrders.reduce((a, b) => {
         return a + b.price
       }, 0)
     },
-    [orders]
+    [filteredOrders]
   )
+
+
 
   return (
     <>
       <Box sx={{maxWidth: 800, margin: 'auto'}}>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={['DatePicker', 'DatePicker']}>
+                  <DatePicker
+                      label="From"
+                      value={dateFrom}
+                      format="YYYY-MM-DD"
+                      onChange={(newValue) => setDateFrom(newValue)}
+                  />
+
+                  <DatePicker
+                      label="To"
+                      value={dateTo}
+                      format="YYYY-MM-DD"
+                      onChange={(newValue) => setDateTo(newValue)}
+                  />
+              </DemoContainer>
+          </LocalizationProvider>
+
         <Button onClick={onAddOrder}>Add order</Button>
         <Button onClick={() => setIsOpem(true)}>Open POPUP</Button>
         <TextField
@@ -94,7 +161,7 @@ function App() {
         <Box>
           <p>Tong Tien La: {totalAmount}</p>
         </Box>
-        <TableContainer columns={columns} rows={orders} maxWidth={800}/>
+        <TableContainer columns={columns} rows={filteredOrders} maxWidth={800}/>
 
         <Dialog
           open={isOpen}

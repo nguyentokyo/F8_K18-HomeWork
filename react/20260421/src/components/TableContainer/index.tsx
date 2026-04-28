@@ -9,8 +9,8 @@ interface Props {
   columns: Column[]
   rows: Row[]
   maxWidth?: number | string
-  onClickEdit?: (id: number) => void
-  onClickDelete?: (id: number) => void
+  onClickEdit?: (id: number | string) => void
+  onClickDelete?: (id: number | string) => void
 }
 
 const TableContainer = ({columns, rows, maxWidth, onClickEdit, onClickDelete}: Props) => {
