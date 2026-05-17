@@ -5,6 +5,7 @@ import { ThemeContext } from "../context/ThemeContext.jsx";
 const Content = () => {
     const { theme } = useContext(ThemeContext);
 
+
     const styles = {
         backgroundColor: theme === "light" ? "#f5f5f5" : "#222222",
         color: theme === "light" ? "#000000" : "#ffffff",
